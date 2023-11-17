@@ -308,3 +308,46 @@ var indefinida = 33 ;
 Recursos
 
 Código fuente
+
+**Sintaxis de comentarios de JavaScript**
+
+Esta guía explica ambas opciones de sintaxis para agregar comentarios a archivos JavaScript.
+
+En esta guía, hablaremos sobre comentarios en javascript. Cada lenguaje de programación con el que he trabajado tiene un concepto de comentarios y lo que son los comentarios es que te permiten poner texto en tu código sin tener que ejecutarlo. Entonces, lo que sucederá es que puedes escribir lo que quieras en estos comentarios y luego, cuando el intérprete de JavaScript escanea el código, reconoce qué es un comentario y luego lo ignora por completo.
+
+Todo lo que pongas dentro no funcionará. Antes de mostrarles la sintaxis de esto, quiero hacer una declaración sobre los comentarios de código y esto es algo que he visto a lo largo de los años. Y por eso quiero presentarlo ahora. Y es que debes ser muy intencional con los comentarios de tu código. Porque he visto a muchos desarrolladores, especialmente desarrolladores nuevos, que cargan sus programas con todo tipo de comentarios y lo que también he visto sucede es que a medida que ese programa se desarrolla y cambian la funcionalidad en sus programas, no siempre regresan y actualizan el comentario.
+
+En otras palabras, si dicen que el comentario es que una función va a realizar una funcionalidad de tipo xyz y requiere estos argumentos y los ponen en el comentario, entonces si hacen un cambio y el comportamiento de la función cambia pero no actualices eso, cuando alguien más vaya o incluso cuando regrese y mire el comentario más tarde, será confuso porque intentarán seguir esas instrucciones y no se ajustarán a las actualizaciones. versión del código.
+
+Así que tenga mucho cuidado cuando los escriba. De hecho, rara vez pongo comentarios en el código que escribo y sigo la filosofía de que mis clases, mis módulos, mis funciones deben autodescribirse y lo verán a medida que comencemos a profundizar en temas más avanzados. Me gusta usar palabras muy descriptivas para variables y funciones para no necesitar comentarios. De hecho, puedo leer el nombre de algo y luego eso describe lo que hace. Esa es una especie de mejor práctica cuando hablamos de cómo organizamos el código y cómo nombramos cosas que pueden no parecer gran cosa. Pero cuanto más avanzado se vuelve un proyecto, más importante se vuelve el nombre. Y no querrás confiar en los comentarios porque podrían decir cualquier cosa y pueden ser muy confusos y provocar algunos errores si no se actualizan.
+
+Dicho todo esto, ahora déjame mostrarte cómo usar los comentarios. Hay dos formas diferentes de hacerlo, la primera es con un comentario de una sola línea. Con eso solo haces dos barras //y luego puedes poner lo que quieras después de eso, por ejemplo.
+
+//this line of code is commented out
+
+Como puede ver, el resaltador de sintaxis muestra que está atenuado, lo que representa que no sucederá nada si ejecuto esto. No sale nada en la consola, literalmente, no se cambia ningún código. Ahora es cuando tienes solo una línea de comentarios. Lo bueno de esto también es que puedes ponerlos en la misma línea que el código siempre que lo coloques después del código.
+
+Si lo hagoconsole.log('Hi there'); // Here is another comment
+
+Verá esto a medida que avance en la documentación y, a medida que avance en su viaje con JavaScript, verá que esto sucede bastante cuando un desarrollador tendrá una sola línea de código y luego querrá describir algo que está justo en esa linea. Y esta es una buena manera de hacerlo. Ahora, otra forma si desea tener comentarios de varias líneas es usar esta sintaxis, una barra seguida de un Asterix.
+
+/* and then you can
+put anything you
+want here on
+multiple lines
+*/
+
+y luego lo cierras con una barra de Asterix y otra barra y luego todo lo que hay dentro estará contenido en ese comentario y no sucederá nada. Si ejecuta este programa completo aquí mismo, podrá ver que lo único que se ejecuta es una console.loglínea de código. Todo lo demás se considera un comentario. Esa es la sintaxis para ambos tipos de comentarios que puedes usar en javascript.
+
+// Puedes poner lo que quieras aquí
+
+console.log( ' Hola ' ); // Aquí hay otro comentario
+
+/*
+Cualquier cosa
+quieres
+aquí
+*/
+Recursos
+
+Código fuente
