@@ -137,3 +137,100 @@ Ahora, esto es exactamente como lo hicimos en el navegador simplemente usando la
 Recursos
 
 CódigoPen
+
+**Cómo trabajar con variables en JavaScript**
+
+Esta guía examina cómo trabajar con variables en JavaScript, incluyendo: cómo almacenar datos en variables, cómo definir múltiples variables al mismo tiempo y cómo usar las opciones de variable let y var.
+Tareas de guía
+Leer tutorial
+Ver vídeo guía
+Completa el ejercicio
+Play Video
+En esta guía, conoceremos las variables de JavaScript. Las variables en la programación de computadoras son herramientas que puede utilizar para almacenar datos. Ésa es una de las formas más fáciles de pensar en ellos. Hay una serie de analogías que he escuchado que son útiles, como pensar en una variable como si fuera un cubo donde puedes colocar el contenido en ese cubo y luego desde allí puedes transportarlo y usarlo como lo necesites.
+
+Básicamente, una variable es como una instalación de almacenamiento para cualquier cosa que necesites colocar en ella. Ahora Javascript tiene todo tipo de razones diferentes para usar variables. A medida que avance en este curso, los usaremos en prácticamente todas las guías. Por lo tanto, es una buena idea familiarizarse con ellos y, si aprende otros lenguajes de programación, cada uno de ellos tiene algún tipo de concepto de variable.
+
+Para poder acceder a los datos, poder almacenar algo dentro y luego llamarlo más tarde. Eso es esencialmente lo que son las variables. Voy a mostrarles dos formas diferentes en las que podemos usarlos; por lo general, solo usaré un tipo de entorno de desarrollo. Pero solo porque esto es al principio del curso, voy a usar ambos. Si presiono (Control + shift + i), aparecerá la consola de JavaScript aquí. Si acerco y acerco si estás en una PC con solo presionar control y más o comando y más en una Mac. Principalmente hago esto para que puedas verlo mejor.
+
+Si borro la consola, ahora puedo escribirla. La sintaxis que voy a utilizar es algo que creo que es intuitivo. Una variable comienza con las letras VAR. Lo que podemos hacer en javascript es decir var y luego el nombre de la variable. Aquí solo voy a decir var name y voy a establecerlo igual al nombre de mi hija, voy a decir var name = Kristine;y luego terminaré con un punto y coma.
+
+Si presiono regresar, esto se ha almacenado. El nombre Kristine se ha almacenado en el nombre de la variable. Indefinido, lo que esto significa esencialmente es cada vez que almacenamos un valor y almacenamos un dato dentro de una variable. Esto simplemente significa que no ha ocurrido nada más. En otras palabras, no hemos impreso esos datos. No lo hemos enviado a una función, no hemos hecho nada con él, por lo que este valor de retorno simplemente no está definido porque no se devolvió nada. Si eres nuevo en la programación, probablemente eso no tenga ningún sentido, y está perfectamente bien. Entenderemos lo que significa devolver algo más adelante.
+
+No dejes que esto te confunda si eres nuevo en esto. Ahora lo que podemos hacer es llamar al final "nombre" con un punto y coma y name;regresar y ahora puede ver que tenemos acceso a este nombre. Esa es una forma muy básica de poder utilizar esto.
+Ahora, otra cosa, mientras sigues el curso, también pondré todo el código a tu disposición en GitHub. Así que podrán consultarlo aquí y también lo guardaré en las guías, para que tengan un punto de referencia.
+
+Voy a terminar esta charla sobre variables en CodePen. Como me gusta la forma en que se representa, también hace que sea más fácil verlo todo. Vimos cómo podemos almacenar un nombre, ahora hablemos también de cómo podemos almacenar múltiples valores. Voy a hacer un pequeño cambio aquí, abordaré la configuración y abordaré el comportamiento.
+
+grande
+
+Hablamos de javascript y algunas de las diferentes opciones. Si hago clic en comportamiento, no quiero que esto se guarde automáticamente y no quiero una vista previa de actualización automática. Está perfectamente bien si lo tienes. Lo único que no me gusta de esto, dar un tutorial y que puedas verlo es en la consola. De hecho, verás el resultado tal vez antes de lo que me gustaría que pudieras verlo. Puede resultar un poco confuso. Simplemente lo haré para que no se actualice automáticamente. Puedes dejar eso de tu lado, pero quiero ser muy claro con lo que hace cada tipo de código que escribo. Así que voy a cambiar esa opción, así que ahora está guardada. Ahora puedes ver que tenemos este nuevo botón llamado ejecutar.
+
+grande
+
+Ya no se guarda automáticamente ni se ejecuta automáticamente. Ahora sólo tenemos que pulsar ejecutar y ejecutará el código por nosotros. Ahora, si escribo lo mismo, diré que var name = 'Kristine';estoy haciendo exactamente el mismo código para que veas que todo está funcionando. Ahora, si presiono ejecutar, no pasará nada porque no se devuelve nada. Aquí es donde el lápiz de código y la consola de JavaScript son un poco diferentes. Si queremos que aparezca algo aquí abajo entonces tenemos que hacer algo como esto donde digo console.log(name);y ahora si ejecuto esto se mostrará a Kristine.
+
+grande
+
+Otra opción para que sepas que está disponible y lo haremos varias veces y este curso es una alerta. Lo que hace una alerta es, por ejemplo, si alguna vez estuvo en un navegador, presionó un botón y apareció una pequeña pantalla que decía "¿Está seguro de que desea hacer esto?", como si intentara eliminar algo que pudiera tener. una pequeña ventana emergente que dice "¿Estás seguro de que quieres hacer eso?". Bueno, muchas veces eso es una alerta de JavaScript.
+
+si corro
+
+var name = 'Kristine';
+alert(name);
+
+Puedes ver que apareció una cosita que dice Kristine porque llamamos alerta y nombre.
+
+grande
+
+Esas son dos formas de poder visualizar lo que tenemos disponible.
+
+Voy a mostrarles algunas formas diferentes en las que podemos trabajar con variables. Esta es una forma muy básica.
+
+Pero también tenemos un tipo diferente de variable. Tenemos un tipo de variable llamada let. Var es una opción, vamos a otra y voy a cambiar mi voy var name = 'Kristine';a decir var age = 12;y luego let name = 'Kristine';Y ahora si digo console.log(age);seguido de console.log(name);puedo presionar borrar y ejecutar esto y puedes ver que imprime 12 y Kristine, así que todo lo que hay allí está funcionando correctamente.
+
+Ahora vamos a discutir en algunos episodios posteriores cuál es la diferencia entre var y let. Pero sólo para avisarle un poco, esas son las dos formas principales en que declarará variables en JavaScript, sólo para darle un pequeño adelanto. La diferencia es que var es un tipo de variable que puedes cambiar y dejar que sea algo que no deseas cambiar y, de hecho, la mayoría de las versiones de JavaScript ni siquiera te permiten cambiarlo. En otras palabras, si digo que let name = 'Kristine';nunca podré cambiar el nombre más adelante y hablaré más adelante cuando quieras hacer algo así.
+
+Ahora hay otras formas en las que podemos trabajar con estos. A veces es posible que no desee definir los valores de inmediato.
+
+Si tengo varias variables, digamos que me deshago de todos los ejemplos anteriores. Digamos que tengo un nombre y digamos que tengo una ciudad y una edad. De hecho, puedo definir todos estos al mismo tiempo. Si sé que mi lista completa de variables son nombre, ciudad y edad, simplemente puedo decirvar name, city, age;
+
+A medida que avanza el programa puedo definirlos más adelante. Puedo decir,
+
+name = 'Kristine';
+city = 'Scottsdale';
+age = 12;
+
+asegúrese de terminarlos con punto y coma.
+
+Déjame hacer un registro más de la consola, ves que tenemos edad y nombre. También agreguemos la ciudad para que puedas ver que todo está funcionando.
+
+Todo junto debería verse así
+name = 'Kristine';
+city = 'Scottsdale';
+age = 12;
+console.log(age);
+console.log(name);
+console.log(city);
+
+Ahora, si ejecuto esto, podrán ver que tenemos a Kristine, de 12 años, y luego a Scottsdale.
+
+medio
+
+Esta es otra convención común que verá al declarar variables. Es simplemente declarar el nombre. Básicamente, estás definiendo y diciendo OK, tengo estos diferentes puntos de datos con los que quiero trabajar y algún tiempo después los definiré. Ahora quizás te preguntes por qué querría hacer esto.
+
+Bueno, es más difícil de ver cuando simplemente estás haciendo programación pura como esta. Pero si imagina una aplicación del mundo real como, por ejemplo, una aplicación de facturación, es posible que desee decir que tiene cosas como el nombre de un cliente y un total y una lista de productos o una descripción o algo así y luego tiene cientos de artículos. y desea representarlos todos en la página.
+
+Es posible que desee enumerar cada uno de esos elementos en la parte superior y luego, a medida que se ejecuta el programa, simplemente completará cada uno de los valores para establecer cada variable igual a ese valor cada vez que se muestre en este ejemplo. para la factura. Ese es un momento en el que querrás hacerlo para que quede más limpio y puedas ver en una parte de tu código todas tus variables, dónde están enumeradas y luego puedes ir y acceder a ellas cuando quieras. Necesitar.
+
+Así es como puedes trabajar con variables en javascript.
+
+var nombre, ciudad, edad;
+nombre = ' Cristina ' ;
+ciudad = ' Scottsdale ' ;
+edad = 12 ;
+
+console.log(edad);
+consola.log(nombre);
+console.log(ciudad);
+Recursos
+Código fuente
