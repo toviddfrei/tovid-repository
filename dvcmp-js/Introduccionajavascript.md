@@ -263,3 +263,48 @@ sea ​​edad = 15 ; // ¡no!
 console.log(edad);
 Recursos
 Código fuente
+
+**Guía para el levantamiento de JavaScript**
+
+En esta lección examinaremos qué es JavaScript Hoisting y cómo afecta cuándo es necesario declarar y asignar variables.
+
+Hemos hablado de variables. Cómo definirlos, cómo reasignar valores, hemos hablado de las diferencias entre y lety varahora vamos a hablar de algo que es bastante específico de JavaScript.
+
+Muy pocos lenguajes de programación trabajan con este tema como lo hace javascript. El tema se llama hoisting. HoistingEs esencialmente una forma muy específica en la que el intérprete de JavaScript lee las variables. Así que veremos algunos ejemplos para ver cómo funciona. Básicamente, esto se relacionará con dónde debe definir sus variables en su programa. Si los define en el orden incorrecto, es posible que se encuentre con algunos tipos extraños de errores. La forma en que hoistingfunciona es que no voy a declarar una variable, solo voy a asignar una variable. Si tengo una variable como esta name = 'Kristine';y escriboconsole.log(name);
+
+Note que no he usado varo letpero Hoistinglo que realmente puedo hacer es decir var name;en la parte inferior. Si ejecuto este código, imprime Kristine.
+
+No hay ningún problema con eso, la razón de esto es algo que puede parecer un poco confuso si eres nuevo en la programación o si vienes de un lenguaje de programación diferente y nunca antes has usado JavaScript. Básicamente, lo que hace el intérprete hoistinges intentar encontrar cada lugar donde se ha declarado una variable.
+
+Busca todo este tipo de cosas var name;y, de hecho, las precarga en la parte superior. Escribir este código realmente se ve más así,
+
+nombre de la variable ;
+nombre = ' Cristina ' ;
+consola.log(nombre);
+debido a hoistingy esa es la razón por la que se llama hoistingporque estas declaraciones se elevan a lo más alto. Así es como funciona.
+
+Hay una pequeña advertencia hoistingy es que solo funciona con declaraciones. No funciona con asignación. Voy a intentar hacer algo parecido. Voy a decir console.log(age);y luego abajo. voy a decirvar age = 15;
+
+console.log(edad);
+var edad = 15
+Ahora si vengo aquí y ejecuto esto. Puede ver que no imprime 15. Imprime indefinido. Si nunca ha trabajado hoistingantes con JavaScript, puede parecer un poco extraño porque parece que declaramos la variable edad, pero en realidad la declaramos y le asignamos un valor al mismo tiempo. Cada vez que lo haga, el intérprete de JavaScript lo verá de manera diferente en comparación con si lo acaba de definir. O si simplemente lo declaras estos no llegan hoisteda la cima. Ésa es una diferencia muy clave a tener en cuenta. Y conduce a una de las primeras mejores prácticas de las que vamos a hablar y es evitar hoistingproblemas. Realmente se considera la mejor práctica asignar sus variables y declararlas en la parte superior.
+
+Hacer algo así podría provocar algunos errores extraños. Siempre es mejor escribir tu código más así.
+
+var edad = 15 ;
+console.log(edad);
+porque si haces esto y lo ejecutas ahora podrás ver que imprime 15 exactamente como debería.
+
+Hoistinges algo que es muy importante saber y es importante saber que esa es la forma en que JavaScript ve las declaraciones, pero para facilitar las cosas y hacer que su código sea más fácil de leer y también más fácil de depurar, la mejor práctica es enumerar siempre las variables directamente en la parte superior de sus programas.
+
+// 
+Nombre elevado = ' Kristine ' ;
+consola.log(nombre); // nombre var 'Kristine' ;
+
+
+// Inicializadores no activados 
+console.log(age); // edad 
+var indefinida = 33 ;
+Recursos
+
+Código fuente
