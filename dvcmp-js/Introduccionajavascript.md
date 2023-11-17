@@ -141,11 +141,7 @@ CódigoPen
 **Cómo trabajar con variables en JavaScript**
 
 Esta guía examina cómo trabajar con variables en JavaScript, incluyendo: cómo almacenar datos en variables, cómo definir múltiples variables al mismo tiempo y cómo usar las opciones de variable let y var.
-Tareas de guía
-Leer tutorial
-Ver vídeo guía
-Completa el ejercicio
-Play Video
+
 En esta guía, conoceremos las variables de JavaScript. Las variables en la programación de computadoras son herramientas que puede utilizar para almacenar datos. Ésa es una de las formas más fáciles de pensar en ellos. Hay una serie de analogías que he escuchado que son útiles, como pensar en una variable como si fuera un cubo donde puedes colocar el contenido en ese cubo y luego desde allí puedes transportarlo y usarlo como lo necesites.
 
 Básicamente, una variable es como una instalación de almacenamiento para cualquier cosa que necesites colocar en ella. Ahora Javascript tiene todo tipo de razones diferentes para usar variables. A medida que avance en este curso, los usaremos en prácticamente todas las guías. Por lo tanto, es una buena idea familiarizarse con ellos y, si aprende otros lenguajes de programación, cada uno de ellos tiene algún tipo de concepto de variable.
@@ -161,15 +157,9 @@ Ahora, otra cosa, mientras sigues el curso, también pondré todo el código a t
 
 Voy a terminar esta charla sobre variables en CodePen. Como me gusta la forma en que se representa, también hace que sea más fácil verlo todo. Vimos cómo podemos almacenar un nombre, ahora hablemos también de cómo podemos almacenar múltiples valores. Voy a hacer un pequeño cambio aquí, abordaré la configuración y abordaré el comportamiento.
 
-grande
-
 Hablamos de javascript y algunas de las diferentes opciones. Si hago clic en comportamiento, no quiero que esto se guarde automáticamente y no quiero una vista previa de actualización automática. Está perfectamente bien si lo tienes. Lo único que no me gusta de esto, dar un tutorial y que puedas verlo es en la consola. De hecho, verás el resultado tal vez antes de lo que me gustaría que pudieras verlo. Puede resultar un poco confuso. Simplemente lo haré para que no se actualice automáticamente. Puedes dejar eso de tu lado, pero quiero ser muy claro con lo que hace cada tipo de código que escribo. Así que voy a cambiar esa opción, así que ahora está guardada. Ahora puedes ver que tenemos este nuevo botón llamado ejecutar.
 
-grande
-
 Ya no se guarda automáticamente ni se ejecuta automáticamente. Ahora sólo tenemos que pulsar ejecutar y ejecutará el código por nosotros. Ahora, si escribo lo mismo, diré que var name = 'Kristine';estoy haciendo exactamente el mismo código para que veas que todo está funcionando. Ahora, si presiono ejecutar, no pasará nada porque no se devuelve nada. Aquí es donde el lápiz de código y la consola de JavaScript son un poco diferentes. Si queremos que aparezca algo aquí abajo entonces tenemos que hacer algo como esto donde digo console.log(name);y ahora si ejecuto esto se mostrará a Kristine.
-
-grande
 
 Otra opción para que sepas que está disponible y lo haremos varias veces y este curso es una alerta. Lo que hace una alerta es, por ejemplo, si alguna vez estuvo en un navegador, presionó un botón y apareció una pequeña pantalla que decía "¿Está seguro de que desea hacer esto?", como si intentara eliminar algo que pudiera tener. una pequeña ventana emergente que dice "¿Estás seguro de que quieres hacer eso?". Bueno, muchas veces eso es una alerta de JavaScript.
 
@@ -232,5 +222,44 @@ edad = 12 ;
 console.log(edad);
 consola.log(nombre);
 console.log(ciudad);
+Recursos
+Código fuente
+
+**Comprender la diferencia clave entre los tipos de variables Var y Let**
+
+Esta guía explica las diferencias clave entre los tipos de variables basadas en var y let en el lenguaje de programación JavaScript. Centrándose en la característica única de 'let' que no permite redefinirlo.
+
+Ahora que tiene una buena idea de cómo crear variables, tanto cómo definirlas como cómo establecer sus valores. Hablemos de cómo podemos realmente cambiar el valor de una variable. Esto nos llevará directamente a la conversación para comprender la diferencia principal entre el tipo de variables var y el tipo let de variables que acabamos de analizar.
+
+Voy a crear una nueva variable aquí y a esta la llamaré edad y la estableceremos en 12 var age = 12;y luego solo para asegurarnos de que todo esté funcionando. Dices console.log(age);que si ejecuto esto, lo ejecuta y es 12.
+
+Todo está funcionando tal como era de esperar. Ahora puedo redefinir esto, así que si subo aquí, lo copio y de hecho copiaré ambas líneas. Ahora, si quiero redefinir esto y decir cambiarlo a 15 y ejecutarlo nuevamente, puedes ver que tenemos 12 y 15 impresos aquí perfectamente.
+
+Así que todo está funcionando de la manera que esperabas. Le das a borrar y también lo guardas. Y ahora hablemos de cómo funciona LET de manera diferente. Voy a cambiar esto a leten lugar de var. Ahora intentemos ejecutarlo exactamente de la misma manera que lo hicimos. Si presiono ejecutar, es posible que notes que no pasa nada. Golpéalo de nuevo. Todavía no pasa nada. Eso no es un problema con su navegador o con el lápiz de código, así es como letse supone que funciona la variable. Se supone que no puedes redefinir toda la variable.
+
+Y si quieres un poco de información sobre eso, acércate y haz clic en esta pequeña flecha aquí.
+
+Aquí es donde hablamos de analizar JS. Si haces clic en eso podrás ver que en realidad te muestra el problema y dice que la edad ya ha sido declarada.
+
+También dice que lo busques en Google, lo que te daría una pequeña idea de lo que está sucediendo exactamente. Puedes hacerlo si te apetece. Simplemente explicaré la forma en que personalmente me gusta pensar al respecto. Y es que a varte proporciona un tipo de variable muy flexible; puedes considerarlo casi como un tipo de contenedor temporal. Puedes usarlo, puedes deshacerte de él. Puede reemplazarlo, anularlo, todo funciona exactamente de la manera que espera que funcione.
+
+letpor otro lado, ofrece un marco un poco más estricto sobre cómo redefinir las variables y es posible que se pregunte cuándo querría utilizarlo. Puedo decirles que hay varias ocasiones en las que accidentalmente anulé variables. Entonces defino algo como decir que tenía un blog y tenía una variable llamada publicaciones de blog y se suponía que esa variable contendría la publicación del blog. Pero en alguna otra parte del programa quería llamar otra entrada de blog, lo redefinié y accidentalmente anulé ese valor. Si hubiera usado un letentonces eso no habría sucedido.
+
+El programa habría arrojado un error y habría visto dónde estaba el problema, así que siempre que quieras tener algún tipo de variable o punto de datos que no quieras anular accidentalmente, ahí es donde resulta muy útil lety Verá que se utilizará bastante javascript moderno leten todos los programas y eso también se extiende a marcos como angular JS. Ves muchas letvariables base porque es un poco más fácil de controlar y no tienes tanto miedo de que uno de tus valores se anule accidentalmente más adelante en el programa. Esta es una introducción a las principales diferencias entre varylet
+
+Y también demuestra cómo se pueden cambiar los valores de las variables.
+
+Las variables var se pueden redefinir
+var edad = 12 ;
+console.log(edad);
+
+var edad = 15 ; // ¡sí!
+console.log(edad);
+Dejar que las variables no se puedan redefinir
+sea ​​edad = 12 ;
+console.log(edad);
+
+sea ​​edad = 15 ; // ¡no!
+console.log(edad);
 Recursos
 Código fuente
