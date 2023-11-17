@@ -1,0 +1,194 @@
+/* Styles head-nav */
+.head-nav{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 65px;
+    background-color: black;
+    color: white;
+}
+
+/* Styles head-left-colum */
+.head-nav>.head-left-column{
+    width: 180px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.head-nav>.head-left-column img{
+    width: 150px;
+}
+
+/* Styles head-center-column */
+.head-nav>.head-center-column{
+    display: flex;
+    flex-direction: column;
+    justify-items: left;
+    width: 600px;
+    font-weight: 900;
+    padding-left: 15px;
+}
+
+.head-nav>.head-center-column>.head-center-column-title{
+    color:darkgoldenrod;
+    text-align: left;
+    font-size: 1em;
+}
+
+.head-nav>.head-center-column>.head-center-column-nav{
+    display: flex;
+    font-size: 1em;    
+}
+
+.head-nav>.head-center-column>.head-center-column-nav>.head-center-column-nav-link {
+    padding-right: 15px;
+}
+
+.head-nav>.head-center-column>.head-center-column-nav>.head-center-column-nav-link>.head-center-column-nav-link-list {
+    padding-left: 20px;
+    font-size: 0.9em;
+    color: rgb(156, 156, 156);
+    font-weight: 600;
+}
+
+.head-nav>.head-center-column>.head-center-column-nav>.head-center-column-nav-link>.head-center-column-nav-link-list i {
+    padding-left: 10px;
+    font-size: 0.8em;
+}
+
+/* Styles head-right-column */
+.head-nav>.head-right-column{
+    display: flex;
+    width: 450px;
+    justify-content: end;
+}
+
+.head-nav>.head-right-column>.head-right-column-bt{
+    background-color: hsl(227.37deg 12.26% 30.39%);
+    font-size: 1em;
+    font-weight: 700;
+    border-radius: 3px;
+    text-align: center;
+    padding: 10px 15px;
+    margin: 5px;
+}
+
+.head-nav>.head-right-column>.head-right-column-bt i{
+    color: aquamarine;
+    padding-left: 2px;
+    font-size: 1em;
+    font-weight: 900;
+    align-content: center;
+}
+
+.head-nav>.head-right-column>.head-right-column-bt-search {
+    font-size: 1.3em;
+    font-weight: 900;
+    color: rgb(156, 156, 156);
+    text-align: center;
+    padding: 10px 15px;
+    margin: 5px;
+}
+
+/* Styles homepage-content */
+.homepage-content{
+    display: flex;
+    background-color:hsl(227.37deg 12.26% 15.39%);
+}
+
+.homepage-content>.hc-column-left{
+    color: white;
+    padding-left: 45px;
+    padding-right: 150px;
+    padding-top: 35px;
+    font-weight: 300;
+}
+
+.homepage-content>.hc-column-left>.hc-column-left-title{
+    font-size: 2.5em;
+    
+}
+
+.homepage-content>.hc-column-left>.hc-column-left-content {
+    font-size: 2.1em;
+}
+
+.homepage-content>.hc-column-left>.hc-column-left-nav {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.homepage-content>.hc-column-left>.hc-column-left-nav>.hc-column-left-nav-bt1 {
+   background-color:aquamarine;
+   color: black;
+   font-size: 2em;
+   font-weight: 700;
+   margin-right: 10px;
+   padding: 10px 20px;
+   border-radius: 3px;
+}
+
+.homepage-content>.hc-column-left>.hc-column-left-nav>.hc-column-left-nav-bt2 {
+    background-color: black;
+    color: white;
+    font-size: 2em;
+    font-weight: 700;
+    margin-right: 10px;
+    padding: 10px 20px;
+    border-radius: 3px;
+}
+
+
+.homepage-content>.hc-column-right {
+    padding-top: 60px;
+    text-decoration: none;
+}
+
+.homepage-content>.hc-column-right>.hc-column-right-title {
+    padding-left: 20px;
+    font-family: 2rem;
+    font-weight: 900;
+    color: white;
+}
+
+.homepage-content>.hc-column-right>.hc-column-right-title b {
+    color: aquamarine;
+}
+
+.homepage-content>.hc-column-right>.hc-column-right-content img{
+    width: 525px;
+    box-shadow: -5px -5px 40px 35px rgba(0, 0, 0, 0.2);
+}
+
+/* Styles footer */
+.footer{
+    background-color: #1e1e1e;
+    color: white;
+}
+
+.footer>.footer-nav{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.footer>.footer-nav>.footer-nav-link {
+    font-weight: 600;
+    text-align: center;
+    padding: 15px 0px;
+    border: 1px solid hsl(227.37deg 12.26% 50.39%);
+    background-color: hsl(227.37deg 12.26% 30.39%);
+}
+
+.footer>.footer-nav>.footer-nav-link b{
+    font-family: "Belanosima", sans-serif;
+    font-size: 1em;
+    font-weight: 900;
+}
+
+/* Styles helpers */
+.spacer70 {
+    height: 70px;
+    width: 100%;
+    background-color: #1e1e1e;
+}
