@@ -225,6 +225,7 @@ console.log(ciudad);
 Recursos
 Código fuente
 
+<<<<<<< HEAD
 **Comprender la diferencia clave entre los tipos de variables Var y Let**
 
 Esta guía explica las diferencias clave entre los tipos de variables basadas en var y let en el lenguaje de programación JavaScript. Centrándose en la característica única de 'let' que no permite redefinirlo.
@@ -305,10 +306,149 @@ consola.log(nombre); // nombre var 'Kristine' ;
 // Inicializadores no activados 
 console.log(age); // edad 
 var indefinida = 33 ;
+=======
+**Lista completa de tipos de datos de JavaScript**
+
+Esta lección recorre cada uno de los tipos de datos de JavaScript. Además, analizaremos cómo JavaScript utiliza la escritura dinámica.
+Tareas de guía
+
+En esta guía, hablaremos sobre los tipos de datos de JavaScript. Si es nuevo en el desarrollo de JavaScript o en la programación, hablemos de qué es un tipo de datos. Básicamente, así es como JavaScript clasifica todos nuestros puntos de datos. Si tenemos variables, un tipo de datos es una forma en que JavaScript ve ese tipo de variable, también ve una oración o ve un número. La razón por la que eso es importante (hay más categorías que esa). Esos son sólo algunos ejemplos.
+
+Imagina que tienes una oración de palabras, esa oración puede tener ciertos tipos de funciones llamadas para que puedas poner en mayúscula todas las palabras si intentas poner en mayúscula un número. Entonces ocurrirá un error y debería ocurrir porque necesitamos saberlo y necesitamos poder usar las funciones correctas en el tipo correcto de datos y eso es lo que los tipos de datos nos permiten hacer.
+
+Vamos a repasar cada uno de los tipos de datos que proporciona javascript. Voy a poner un comentario arriba para cada uno.
+
+El primero, comenzaremos en orden alfabético, es el Booleantipo de datos.
+
+Ahora Boolean puede tener dos valores potenciales. Verdadero y falso.
+
+Puedo declarar algunas variables.
+
+var verdad = verdadero ;
+var notTruthy = falso ;
+console.log(veraz);
+Si ejecuto esto, puedes ver que devuelve verdadero.
+
+Ahora, esto no es un nombre, no es una letra, no es una serie de letras como lo son nuestras variables de nombre. Estos son sólo dos valores. Verdadero y falso. Y esas son las dos únicas cosas que puede ser un booleano. Entonces, esto sería algo así como decir si un usuario es un usuario pago si está creando una aplicación y es un producto SASS y desea poder ver cuáles de estos usuarios son miembros pagos y cuáles son miembros gratuitos. Bueno, en sus datos puede decir que este es un usuario pago, es cierto que se le paga y luego, cuando entremos en los condicionales, hablaremos sobre cómo podemos aprovechar eso para darle a nuestros programas un comportamiento dinámico. Ahora solo sé que tenemos un tipo de datos booleanos y tiene dos valores potenciales, verdadero y falso.
+
+El siguiente del que vamos a hablar es el Nulltipo de datos.
+
+Ahora nulo solo puede tener un valor y ese es nulo.
+
+Si usted dice
+
+var nulo = nulo ;
+console.log(nulo);
+Si ejecuto esto, simplemente imprime nulo.
+
+Básicamente, lo que es nulo es la ausencia de cualquier tipo de valor.
+
+El próximo que vamos a hacer ya lo has visto, pero es importante entender que es diferente a nulo. Entonces nulo significa vacío. Entonces esto sería algo así como, por ejemplo, que tienes una página de registro y tienes algunos campos opcionales como un nombre de usuario de Twitter o algo así. Si un usuario decide no completar eso, entonces ese valor para ese nombre de usuario de Twitter sería simplemente nulo. Es nuestra forma de entender que esa variable o ese valor podría estar ahí. Pero en este caso, simplemente está vacío.
+
+Bajando vamos a pasar al siguiente que es undefined. Lo hemos visto varias veces y, por lo tanto, undefinednos permite hacer algo que generalmente usará más con la depuración porque es exactamente lo que obtiene cuando algo simplemente se declara. Y no se le da un valor.
+
+Así que aquí
+
+var no definido;
+console.log(notDefined);
+y simplemente diga var no definido, configúrelo como igual a, en realidad, en este caso, simplemente no vamos a establecerlo como igual a nada porque generalmente esta es la forma en que verá esto.
+
+Si presiono ejecutar, puedes ver que no está definido. No lo configuré igual a indefinido porque, de forma predeterminada, cuando simplemente declaras una variable, JavaScript la establecerá igual a indefinido.
+
+Es algo importante saberlo porque habrá muchas ocasiones en las que esté depurando su programa y pensará que tiene acceso a algún valor o pensará que estableció el valor sólo más tarde para descubrirlo. Vuelve como indefinido, lo que significa que en algún momento se omitió el lugar donde se asignó el valor o nunca sucedió. Algo así, por eso es importante. Y también es bueno porque puedes hacer cosas como verificar si este valor está definido todavía o no. Y puede parecer que hay algunas similitudes entre nulo e indefinido, pero con suerte se puede ver esa sutil diferencia donde nulo significa que está definido. Tiene acceso a esa variable pero simplemente está vacía. No hay nada allí, mientras que con indefinido lo que significa es que aún no ha sido asignado, por lo que no está vacío. Literalmente, no hay ningún valor ahí, pero debe asignarse más adelante.
+
+Ahora bien, el siguiente que vamos a hacer puede parecer un poco más práctico y es así number.
+Hemos visto esto antes, aquí es donde podemos hacer algo como
+
+var edad = 12 ;
+console.log(edad);
+Esto simplemente imprimirá ese valor. 12 todo allí funciona.
+
+Ahora, aquí es donde quiero hacer una pausa y hablar sobre cómo JavaScript funciona con variables y tipos de datos de manera muy diferente a muchos otros lenguajes de programación. Si viene a JavaScript desde, por ejemplo, Java o C o C++, estos se denominan lenguajes de tipo estático. En esos idiomas, lo que acabamos de hacer aquí no funcionaría.
+
+La razón por la que no funcionaría es que esos lenguajes normalmente requieren que usted defina cuál será el tipo de datos. Entonces la sintaxis se vería así
+
+var edad: Número = 12 ;
+Y luego, en esos casos, los compiladores, cuando escanean el código y llegan a esta variable de edad, dicen OK, podemos esperar que la edad sea del tipo de datos numérico. Y aquí está el valor. Bueno, JavaScript es similar a lenguajes como Ruby y Python, donde en realidad omite ese paso. Por lo tanto, no tiene que escribir eso en el analizador. Realmente funciona para usted. Entonces, en este caso, el intérprete llegará a la línea 12. Verá var, verá edad y luego verá que la asignamos. Ahora hace algunas comprobaciones y comprueba qué tipo de datos es 12 y cuando ve que el tipo de datos para 12 es número, realiza la asignación y lo fuerza.
+
+Javascript tiene algún tipo de lenguajes secundarios o algún precompilador como Typecript que son muy similares a JavaScript pero te obligan a ingresar los tipos de datos que en realidad son la razón por la cual Typecript se llama TypeScript. Mucho de esto es una opinión personal.
+
+Hay un debate bastante grande en la comunidad de desarrolladores sobre si los lenguajes de tipo estático o dinámico son mejores. Las personas que creen en los lenguajes de tipo estático piensan que es mucho mejor porque impone esto. Imagine un escenario con la edad en el que pensamos que será un número, pero hay ocasiones en las que alguien lo escribe y es una cadena.
+
+Entonces, si alguna vez intentáramos hacer algún tipo de cálculo sobre eso. Digamos que intentamos agregar la edad más otro número, arrojará un error y el programa fallará, mientras que si tuviéramos que aplicar eso. Entonces el programa ni siquiera se habría compilado en primer lugar. Ahora, algo de eso es de alto nivel y está empezando a ser un poco más avanzado, así que no dejes que eso te asuste. Sólo quiero darle una pequeña idea de los tipos de datos en JavaScript y de cómo funcionan de manera diferente a muchos otros lenguajes.
+
+Continuando por la línea. tenemos el
+
+StringEl tipo de datos ahora, cadenas, es lo que normalmente verá usado para palabras y oraciones.
+
+var nombre = " Kristine " ;
+Y esto está usando comillas. Y luego, si vengo aquí como lo hemos hecho antes, console.logse imprimirá a Kristine.
+
+Con el tipo de datos cadena tenemos un par de opciones diferentes para hacer esto.
+Pero también podemos hacer algo como esto.
+
+var nombre = " Cristina " ;
+var nombreDos = ' Jordán ' ;
+consola.log(nombre);
+Si nombro dos. Tenga en cuenta que esto funcionará exactamente de la misma manera. Entonces tenemos nombre. Y si obtengo un nombre dos y lo ejecuto, ambos se imprimirán correctamente.
+
+var nombre = " Cristina " ;
+var nombreDos = ' Jordán ' ;
+    consola.log(nombre);
+    console.log(nombreDos);
+Uno de ellos tenía comillas dobles y otro tenía comillas simples. En su mayor parte, la forma en que utilizará JavaScript no importará de una forma u otra. Empieza a volverse más importante cuando hablamos de formatear la salida, pero hablaremos de eso más adelante, cuando entremos en un módulo completo dedicado únicamente al tipo de datos de cadena.
+
+Por ahora, solo sepa que ambos cuando el intérprete de JavaScript vea que reconocerá las comillas y las establecerá como iguales al tipo de datos de cadena.
+
+El último del que voy a hablar es un poco más avanzado y no vamos a entrar en muchos detalles sobre él principalmente porque al crear programas de tipo introductorio ni siquiera tocarás el tipo de datos symbol. Esto es algo completamente nuevo en ESX. Entonces, cualquier cosa anterior a eso no sabrá qué es un símbolo. Básicamente, lo que hacen los símbolos es que son similares a las cadenas, excepto que tienen algunas reglas muy específicas al respecto. No se pueden cambiar. Sólo puede haber uno de ellos. Y por eso son lo más parecido que tiene Javascript a lo que se llama un objeto de tipo inmutable. Entonces, cuando lo creas, es lo que es, no puedes cambiar ese valor.
+
+Se utiliza principalmente para trabajar con objetos, de lo que hablaremos a continuación. Pero son más para funciones de tipo avanzado, pero aún así se las mostraré para que puedan ver cómo se ven todos los tipos de variables.
+
+var miSym = Símbolo();
+console.log(mySym);
+Simplemente imprimirá un símbolo de objeto. Ahora puedes pasar una cadena aquí para que yo pueda pasar foo
+
+var mySym = Símbolo( ' foo ' );
+console.log(mySym);
+Y una cosa para los nuevos desarrolladores mientras leen la documentación. Verás que foo y bar se usan mucho. Y de hecho, algunos desarrolladores se acercaron y preguntaron qué tienen de especial foo y bar. Como nota al margen, no tienen nada de especial. Por alguna razón, se han utilizado durante décadas en la documentación de programación y en las explicaciones porque es una forma muy rápida de saber que una palabra simple para usar es literalmente exactamente la misma.
+
+Podría escribir asdf o algo así, no representa nada especial. Siempre que vea eso en un desbordamiento de pila o en algún documento, sepa que todo lo que están haciendo es que solo querían usar una palabra simple. La única razón por la que quería mencionarlo es porque los estudiantes me lo han preguntado varias veces. No tiene nada de especial. En ese sentido, es sólo una especie de tradición de programación.
+
+Si presiono correr ahora. Ahora tenemos un símbolo de objeto.
+
+medio
+
+pero dentro está el foo real. Si vamos a usar esto en un objeto del que hablaremos a continuación, tendrá una representación única que será el símbolo de foo.
+
+Ese es el conjunto completo de tipos de datos en javascript. Una vez más, boolean null undefined number stringen symbolla próxima guía hablaremos sobre el tipo muy importante de componente en el desarrollo de JavaScript que usaremos durante todo este curso, así que quería dedicarle una lección completa. Y ese es el objeto.
+
+
+// var booleana verdad = verdadero ;
+var notTruthy = falso ;
+
+// Nulo 
+var nully = nulo ;
+
+// No definido 
+var notDefined;
+
+// Número 
+var edad = 12 ;
+
+// Cadena 
+var nombre = " Kristine " ;
+var nombreDos = ' Jordán ' ;
+
+// Símbolo 
+var mySym = Símbolo( ' foo ' );
+
+console.log(mySym);
+>>>>>>> e71e84e (student devcamp js)
 Recursos
 
 Código fuente
 
+<<<<<<< HEAD
 **Sintaxis de comentarios de JavaScript**
 
 Esta guía explica ambas opciones de sintaxis para agregar comentarios a archivos JavaScript.
@@ -348,6 +488,63 @@ Cualquier cosa
 quieres
 aquí
 */
+=======
+**Guía de objetos JavaScript**
+
+Esta guía explica cómo trabajar con objetos JavaScript. Esto incluirá: cómo definir un objeto, cómo analizar valores de un objeto, cómo trabajar con objetos anidados y cómo agregar nuevos pares clave/valor sobre la marcha.
+
+Esta será una lección muy emocionante. La razón es que ahora vamos a hablar de objetos javascript. A medida que avance en su viaje con JavaScript, descubrirá que utilizará objetos durante todo el día. Los objetos se utilizan para todo tipo de programas diferentes para todo tipo de marcos diferentes para trabajar con funciones, estamos trabajando con cada una de las estructuras de datos variables, todo eso.
+
+Vas a utilizar objetos y la razón es porque tiene una sintaxis muy agradable pero también te brinda la capacidad de consultar datos y establecer datos y también crear un modelo para tu objeto. Y eso puede sonar un poco abstracto, por eso vamos a ver un ejemplo básico.
+
+Voy a crear una variable aquí llamada usuario y la sintaxis para esto es usar llaves. Entonces voy a decir var usuario y dentro de él simplemente iré nombre y luego será Kristine. Y eso es todo lo que tengo que hacer.
+
+var usuario = { nombre : ' Kristine ' }
+consola.log(usuario);
+Entonces, si registro esto en la consola. Observe también que no puse un punto y coma después var user = { name: 'Kristine' }. Ahora, si ejecuto esto, imprimirá el objeto. Eso no parece gran cosa, pero significa que nuestra sintaxis es correcta. Pero ahora puedo hacer un objeto o un nombre de usuario para poder llamar a esta clave dentro de él. Se verá así
+
+var usuario = { nombre : ' Kristine ' }
+console.log(nombre.usuario);
+Y ahora puedes ver que imprime a Kristine.
+
+Esto nos da la capacidad de llamar con esta notación de tipo decimal y realmente llamar y hacer referencia a puntos dentro del objeto. Esto es algo muy poderoso y digamos que queremos cambiar el nombre de algo.
+
+var usuario = { nombre : ' Kristine ' }
+nombre.usuario = ' Jordania ' ;
+console.log(nombre.usuario);
+Ahora, si ejecuto esto, puedes ver que ese objeto ha sido cambiado.
+
+Lo que hice fue restablecer el nombre y me deshice de Kristine y en su lugar lo llamó Jordan. Ahora hacemos referencia a ese nuevo nombre. Esa es una forma muy básica de trabajar con objetos. Ahora entremos en un ejemplo un poco más avanzado. La sintaxis siempre que definas un solo par clave-valor y eso es lo que tienes aquí. Tiene una clave en el lado izquierdo seguida de dos puntos seguidos del valor que sea. Siempre que tenga solo uno, está bien ponerlo en una línea. Pero cuando tienes varios, normalmente querrás poner esto en varias líneas, tal como lo hacemos en el siguiente ejemplo. Ahora, a medida que agrega más elementos o más pares clave-valor, coloque una coma al final y luego agregue el siguiente. Aquí voy a decir que la edad es igual a 12 años y la ciudad es igual a Scottsdale.
+
+Ahora puedo hacer referencia a la edad. Ejecute esto nuevamente y devolverá 12. También podríamos configurar la ciudad exactamente de la misma manera. No pasaré por eso porque eso es lo que acabamos de hacer. Pero puedes jugar con ellos para familiarizarte con la sintaxis.
+
+Básicamente, lo que esto hace es darnos la capacidad de crear un objeto con múltiples valores. Cada uno de esos valores tiene algo dentro a lo que podemos hacer referencia cualquier nombre que decidamos darle. Esto crea una interfaz realmente agradable y, como mencioné al principio, usarás esta sintaxis todo el día mientras creas programas javascript. Además de esto, este es un tipo de objeto muy básico. Ahora entremos en un trabajo tipográfico un poco más avanzado. Si pongo una coma después de Scottsdale, mostraré cómo podemos tener objetos anidados para que puedas poner un objeto dentro de otro objeto.
+
+Esto es algo muy común para cosas como el desarrollo de API, donde es necesario poder agrupar elementos dentro de otros elementos. Aquí voy a decir calificaciones y a partir de ahí usaremos exactamente la misma sintaxis, así que usaré llaves nuevamente. Comenzamos con llaves cuando asignamos la variable y luego ponemos nuestros valores. Las calificaciones siguen siendo solo una clave para nuestro objeto de usuario. Pero ahora las calificaciones tienen punto y coma, pero en lugar de algo como una cadena o un número, colocamos otro objeto allí mismo. Aquí puedo poner más claves y más pares clave-valor para poder decir matemáticas y diremos 90 y luego ciencias y llamaremos 80 y luego artes del lenguaje lo pondremos en cien.
+
+La forma en que haría referencia a esto puede parecer intuitiva, pero tal vez no dependa de su experiencia con él. Pero así como podemos llamar a la edad si queremos calificaciones, todo lo que tenemos que hacer es atravesar el objeto, por lo que llamamos calificaciones. Si tuviera que usar console.log, imprimiría cada una de esas calificaciones. Ahora, si quiero una calificación específica, es exactamente de la misma manera que seleccionamos la edad. Entonces, si vengo aquí y ahora quiero tomar matemáticas, simplemente escribo drop math hit run y se imprime 90, que es el valor de matemáticas.
+
+Observe lo que hicimos allí, comenzamos con el objeto de usuario y luego buscamos calificaciones que también contienen un objeto dentro como valor. Y luego tomamos las matemáticas y finalmente obtuvimos el valor que queríamos. Ahora bien, esto es genial, pero se pone aún mejor. Una cosa que sucede con frecuencia es que cuando construyes objetos necesitas construirlos dinámicamente sobre la marcha. Digamos que Kristine tiene una nueva clase y por eso necesitamos agregar una calificación dinámicamente. No podemos volver y cambiar lo que ya está ahí. Realmente necesitamos actualizarlo, que es algo que podría suceder en un programa.
+
+Lo que puedo hacer es decir: user.grades.coding = 99;Lo que esto hará es agregar un nuevo par clave-valor dentro de las calificaciones. Para agregar algo, no tenemos que volver a la variable de usuario y agregarlo; de hecho, podemos hacerlo en tiempo de ejecución.
+
+Creo que eso es algo bastante bueno. Ahora, si digo calificaciones de usuario y ejecuto esto, pueden ver aquí mismo que ahora nuestro objeto de calificaciones tiene lenguaje de codificación, artes, matemáticas y ciencias, aunque no comenzó con eso. Podemos definirlo y agregarlo a medida que se ejecuta nuestro programa. Eso es algo que es genial, pero además, cuanto más avance en su viaje de desarrollo de JavaScript, verá objetos utilizados por todas partes, por lo que es algo con lo que definitivamente le recomiendo que experimente.
+
+Construye tus objetos. Intente crear todo tipo de combinaciones diferentes colocando objetos dentro de otros objetos y descubriendo cómo analizarlos. Y eso le ayudará bastante a medida que avance en este curso, así como cuando comience a crear programas javascript del mundo real.
+
+var usuario = {
+   nombre : ' Kristine ' ,
+   edad : 12 ,
+   ciudad : ' Scottsdale ' ,
+   grados : {
+     matemáticas : 90 ,
+     ciencias : 80 ,
+     artes del lenguaje : 100
+  }
+}
+edad.usuario = 13 ;
+usuario.grados.codificación = 95 ;
+>>>>>>> e71e84e (student devcamp js)
 Recursos
 
 Código fuente
