@@ -634,3 +634,157 @@ tipo de edad;
 Recursos
 Código fuente
 
+**Cómo realizar conversión de tipos en JavaScript**
+
+Esta lección examina cómo convertir datos de varios tipos de datos en diferentes tipos de datos en JavaScript. Además, discutiremos los problemas relacionados con la conversión automática de tipos y cuándo se requiere este tipo de característica en el desarrollo del mundo real.
+
+En esta guía vamos a hablar sobre el encasillamiento. Ahora que tiene una buena idea de qué variables son y cómo tienen los tipos de datos potenciales, cuáles son las categorías en las que se ubica cada uno de los puntos de datos. Un patrón muy común es tener el requisito de que sea necesario cambiar de un tipo de datos a otro y de eso se tratará esta guía. Para empezar, voy a explicar cómo JavaScript es muy indulgente y, de hecho, intenta realizar una conversión de tipos automática por usted. Puede parecer una buena idea, hasta que vea a qué puede conducir accidentalmente.
+
+Voy a empezar en la consola, diciendo una cadena de 100 y voy a restar 42 de eso.
+
+' 100 ' - 42 ;
+Ahora esto devolverá un número entero de 58. Entonces todo funcionó perfectamente allí. Pudo tomar una cuerda y se dio cuenta de que era una cuerda que en realidad tenía un número dentro. Entonces realizó el cálculo correcto.
+
+Ahora si hiciera algo como esto donde digo
+
+100 + nulo
+Si ejecuto esto, es 100.
+
+La razón de esto es que javascript pudo ver nulo y, en lugar de arrojar un error, convirtió nulo en cero, porque simplemente supone que estamos intentando realizar algún tipo de cálculo, obviamente no queremos intentarlo. tome nulo como valor. Queremos tener cero en este caso porque está vacío.
+
+Todo eso tiene sentido, pero empieza a volverse un poco complicado cuando hacemos algo como esto.
+
+100 + 42
+Recuerde que arriba lo hicimos 100 - 42con 100 como una cadena y todo funcionó bien.
+
+¿Qué crees que va a pasar ahora? Bueno, si ejecuto esto, podrás ver que devuelve algo muy diferente. Devuelve una cadena de 10042.
+
+Probablemente no sea lo que buscábamos hacer, la razón de esto es porque JavaScript no sabe si simplemente estamos tratando de agregar el número 42 a la cadena de 100 o estamos tratando de realizar algún tipo de cálculo en él. Eso es algo que simplemente no sabe.
+
+Por si tienes curiosidad, esto no tiene nada que ver con el orden. Si tuviera que hacer
+
+42 + ' 100 '
+Vuelve 42100.
+
+Entonces, cada vez que tienes una cadena y un número e intentas sumarlos, eso no va a funcionar. Más adelante les mostraré cómo podemos hacerlo funcionar haciendo conversión de tipos manual.
+Entonces, ese es el lado automático de esto.
+
+Ahora hablemos de cómo podemos realizar la conversión de tipos manual. voy a decir
+
+var edadUno = 12 ;
+Ahora, si quisiera convertir este número en una cadena, hay dos formas de hacerlo. La primera es llamar a la función de cadena aquí y simplemente pasar la edad 1. Y esto devolverá 12 pero devolverá 12 como una cadena.
+
+Aquí es donde puedo pasar edad 1 como argumento de función, del cual hablaremos en un módulo posterior. Pero tiene otra opción de sintaxis. Puedo decir ageOne.toStringy también porque esta es una función, necesito terminarla con estos paréntesis. Si ejecuto esto, podrás ver que funciona exactamente de la misma manera.
+
+Realmente no hay una gran diferencia en cómo funciona esto. Realmente todo se reduce a una cuestión de cuál es la implementación y si funciona mejor tener un argumento de función o el segundo. Normalmente uso el método de dos cadenas porque normalmente, cuando intento convertir algo, es más fácil usar esa sintaxis de puntos. Pero definitivamente te recomiendo que pruebes ambos. Así es como puedes convertir números en cadenas.
+
+Hablemos de cómo podemos convertir cadenas en números. Porque hay muchas maneras diferentes en que podemos hacer esto. Voy a decir var ageTwo = '33';.
+
+La primera forma es muy similar a cómo lo hicimos con el argumento de la función. Ahora si digo number(ageTwo);que se imprime 33.
+
+
+Lo que va a devolver es 33, pero lo devuelve como un número. Ahora no tenemos un .toNumbermétodo.
+
+Si intenté hacer algo como ageTwo.toNumberpuedes ver, no obtenemos ningún tipo de autocompletado y es porque no existe la función .toNumber, pero hay muchas otras formas en que podemos hacer esto.
+
+El primero que voy a abordar después del número es uno llamado parseInt. Aquí podemos pasar de ageOnenuevo y eso funciona.
+
+Voy a explicar un poco más exactamente qué hace parseInt y de qué otra manera podemos usarlo.
+
+Otra opción es parseFloat.
+
+Lo que esto hará en este caso es devolver exactamente lo mismo.
+
+Donde esto sería diferente es si aprobamos algo como esto.
+
+parseFloat( '33 .5 ' );
+// 33,5
+Esto regresará 33.5como un flotante, lo que significa un punto decimal. Donde como si hiciera algo como:
+
+parseInt( '33 .5 ' );
+// 33
+Devuelve solo 33.
+
+Esa es la diferencia: si necesita que le devuelvan un decimal, entonces parseFloatfunciona. También funciona con números enteros regulares. Si solo necesitas un número entero normal y no te importan los decimales. Entonces podrás utilizarlo parseIntal contenido de tu corazón.
+
+Ahora bien, otro lugar donde esto resulta realmente útil es con algo como esto. Digamos que tienes una cadena grande y no sólo un número bonito y sencillo.
+
+Digamos que tienes algo como esto
+
+parseInt( ' 5555555555555 es mi número de teléfono ' );
+Si ejecuto esto, puedes ver que devuelve el número de teléfono como un número entero.
+
+Una cosa a tener en cuenta es que debe comenzar con algo que pueda convertirse en un número. Si comencé con foo, solo un conjunto aleatorio de cadenas aquí y ejecuto esto, devolverá NaN. Ahora NaN es la abreviatura en javascript de no ser un número.
+
+Lo que nos dice es que no puede realizar esta acción, no puede analizarlo en un número entero, porque el valor que le pasamos no es un número. No es algo que se pueda convertir.
+
+Vamos a abordar el siguiente y este será el último tipo de conversión. Este es uno de mis favoritos. Esto se llama a unary operatory puedo decir + y luego simplemente ageTwo y esto lo convierte así.
+
++ edadDos;
+// 33
+Esta es una forma muy práctica de poder hacerlo. Y quería incluirlo porque en muchas aplicaciones javascript profesionales verás esto unary operatory es una forma de convertir una cadena en un número. Normalmente lo verás en este tipo de sintaxis, donde es:
+
+var foo = + edadDos;
+// indefinido
+Entonces, si devuelvo esto ahora, foo tiene 33.
+
+foo;
+// 33
+Esas son las sintaxis tradicionales donde recibirás algún tipo de valor. Sabes que será una cadena, pero es una cadena que es un número y luego, dentro de ella, simplemente usas el + justo enfrente y lo convierte por ti. Una gran pregunta que debemos hacernos ahora es ¿por qué es esto importante? Porque parece que cuando quieres trabajar con números simplemente trabajas con un número, y cuando quieres trabajar con cadenas, trabajas con la cadena. Hay algunas razones diferentes.
+
+Una es que muchas aplicaciones javascript son aplicaciones basadas en API. Lo que significa que se están comunicando con el mundo exterior y el mundo exterior generalmente enviará números pares como cadenas porque utiliza un marco o un lenguaje llamado notación de objetos javascript. Del cual hablaremos un poco más adelante.
+
+Básicamente, lo que eso significa es que habrá muchas ocasiones en las que obtendrás cosas que deberían ser números, deberían ser números, no deberían ser decimales, pero están envueltos como cadenas, por lo que debes poder analizarlos en cadenas o flotar. Entonces es algo que es muy común.
+
+En otra ocasión harás esto (volvamos a nuestro ejemplo '100' + 42). Ahora imaginemos que tenemos un escenario en el que recibimos información, digamos de una aplicación externa y pasó este valor. Entonces, lo que realmente podemos hacer es decir que el número pasa '100' y ahora tenemos 142.
+
+Número ( ' 100 ' ) + 42 ;
+// 142
+¡Ahora funciona! Así es como puedes pasarlos y decir que no estás seguro de ambos. Está perfectamente bien que ejecutes esto:
+
+Número ( ' 100 ' ) + Número ( 42 );
+// 142
+obtienes exactamente el mismo resultado.
+
+Si no está seguro de qué tipo de datos va a obtener, tal vez a veces, por alguna razón, los obtenga como una cadena, a veces, como un número entero, entonces querrá poder estar seguro de él. Y si le pone un número o utiliza uno de los otros tipos de sistemas como el operador unario o parseInt o parseFloat, entonces puede estar seguro de que su cálculo funcionará.
+
+Lo último que cubriremos en esta guía es que veremos cómo podemos convertir valores booleanos. Si tengo un niño, puedo usar la función numérica aquí. Pase verdadero y esto devolverá uno. Si hago lo mismo con false, esto devuelve 0.
+
+Número ( verdadero );
+// 1
+Número ( falso );
+// 0
+Esto es algo que es muy útil porque en el universo de programación de muy bajo nivel que es, al final del día, lo que todas nuestras computadoras, cada servidor, cada sistema en todo el mundo usa los unos y los ceros reales, usa código binario.
+
+Toda esta programación que hacemos tiene que en algún momento ser analizada hasta el punto de usar unos y ceros. Da la casualidad de que escribimos en idiomas en los que podemos usar palabras y símbolos, pero eventualmente todo tiene que reducirse a 1 o 0. Esto es algo muy útil cuando tienes que verificar algo.
+
+Digamos que estás trabajando con un sistema que realmente no tiene el concepto de verdadero o falso y necesitas poder usar un 1 o un 0. O eso es lo que tienes que devolver, así es como puedes muy rápida y fácilmente hazlo.
+
+Digamos que tiene una función y se comunica con alguna otra API y esa API no sabe qué es verdadero o falso y no pueden interpretarlo. Pero puede interpretar 1 y 0 y así es como debe representarse. Puedes envolver. Verdadero o Falso en él. Devuélvelo y todo funciona. Así es como puedes utilizar el encasillamiento en javascript.
+
+" 100 " + 42 ; // "10042" 
+42 + " 100 " ; // "42100" 
+" 100 " - 42 ; // 58 
+100 + nulo ; // 100
+
+var edadUno = 12 ;
+Cadena (edad uno); // '12' 
+edadOne.toString(); // '12'
+
+var edadDos = ' 33 ' ;
+Número (edad dos); // 33 
+parseInt(edadDos); // 33 
+parseFloat(edadDos); // 33 
++ edadDos; // 33 
+parseInt( ' 5555555555 es mi número de teléfono ' ); // 5555555555 
+parseInt( ' foo 5555555555 es mi número de teléfono ' ); // 
+Número NaN( " 100 " ) + 42 ; // 142
+
+Número ( verdadero ); // 1 
+Número( falso ); // 0
+Recursos
+
+Código fuente
+
+
+
