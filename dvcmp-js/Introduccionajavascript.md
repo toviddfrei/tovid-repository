@@ -873,5 +873,91 @@ Recursos
 
 Código fuente
 
+# Trabajar con funciones de cadena - Parte 2
+
+En esta segunda parte de nuestro módulo sobre funciones de cadenas en JavaScript, examinaremos cómo integrar expresiones regulares para encontrar patrones en datos basados ​​en cadenas.
+
+¡Hola y bienvenido de nuevo! A medida que revisamos la lista completa de funciones de cadena en Javascript. Recuperemos nuestra variable.
+
+var str = ' El veloz zorro marrón saltó sobre el perro perezoso ' ;
+Teniendo eso en cuenta, sigamos adelante.
+
+El siguiente en la lista es repetir. Si hago str.repeat, entonces como argumento entre los pares puedo pasar tantas veces como quiera repetir esa línea.
+
+str.repetir( 5 );     // "El rápido zorro marrón saltó sobre el perro perezosoEl rápido zorro marrón saltó sobre el perro perezosoEl rápido zorro marrón saltó sobre el perro perezosoEl rápido zorro marrón saltó sobre el perro perezosoEl rápido zorro marrón saltó sobre el perro perezoso"
+Ahora puedes ver que esto está impreso. El veloz zorro marrón saltó cinco veces sobre el perro perezoso y lo puso todo en una sola cuerda. Ahora, una vez más, sólo para reforzarlo, esto no alteró la cuerda original. Esto simplemente devolvió un valor. Y esto realmente llega al corazón de cómo funcionan las funciones en JavaScript. Es bastante raro que quieras alterar la variable. Y, de hecho, la forma en que funcionan las variables entra en un tema un poco más avanzado que abordaremos más adelante. Las variables en javascript cuando se pasan a funciones simplemente pasan el valor. No pasan una referencia a la variable. En otras palabras, cuando algo cambia eso o lo altera, no regresa y cambia la variable original. Simplemente devuelve un conjunto de valores actualizado. Entonces, en este caso, cuando ejecutamos repetir cinco veces, solo nos devolvió ese valor.
+
+Podríamos usarlo, podríamos almacenarlo en otra variable y podríamos conectarlo a otra función. Cualquier cosa así y todo eso funcionaría. Pero aún podemos estar seguros de que nuestra cadena variable no cambió.
+
+El siguiente en la lista es un poco diferente. Si nunca has oído hablar de las expresiones regulares, esto te parecerá muy extraño. Una expresión regular es un sistema de coincidencia de patrones. Esto está prácticamente disponible para todos los lenguajes de programación, al menos para todos los lenguajes de programación populares de propósito general. Javascript, Ruby, Perl, Java, cualquiera de estos lenguajes tiene una referencia a lo que se llama expresión regular y lo bueno es que en realidad es más o menos lo mismo en todos esos lenguajes. Ahora bien, debido a eso, las expresiones regulares se ven muy raras. La siguiente función que vamos a hacer se llama match. Esto tomará una expresión regular y luego le dirá si coincidió. Quiero crear un comparador de expresiones regulares para números de teléfono.
+
+Quiero saber si una cadena contiene un número de teléfono. Voy a salir de la pantalla porque no quieres verme escribir esto y tomaré esta expresión regular y la pegaré.
+
+str.match( / (( \( \d {3} \) ?)|( \d {3}-))? \d {3}- \d {4} / );
+Puedes ver por qué no querrías verme escribir esto, probablemente escribiría una pequeña cosa y luego no funcionaría, y tomaría un tiempo. Pero esencialmente lo que esto dice es que se trata de un sistema de coincidencia de patrones. Ahora bien, no dejes que esto te intimide y no creas que tendrás que poder escribirlos desde cero.
+
+Eso definitivamente cae en la línea de lo muy avanzado, hasta el punto de que diría la mitad de las expresiones regulares que uso. Por lo general, lo busco en Google exactamente como lo hice con este. Busqué en Google expresiones regulares para encontrar un número de teléfono y me saludaron cientos de personas que habían puesto sus propios patrones. Básicamente, lo que esto va a hacer es compararlo con javascript o javascript lo usará para compararlo con nuestra cadena y dirá si este patrón coincide con lo que contiene la cadena. Ahora no hay ningún número de teléfono aquí, por lo que debería devolver nulo. Si lo ejecuto, lo hace, no genera errores. Básicamente, lo único que esto significa es que no hay ningún número de teléfono y no hay nada que se reconozca como número de teléfono.
+
+Ahora, si cambio esto y no voy a usar una variable, puedo usar una cadena normal y cambio esto para que sea (5 5 5) 5 5 5 - 5 5 5 5 como un patrón de número de teléfono si presiono devolver. Ahora, mira eso. Eso nos devuelve un objeto completo.
+
+Ahora no se preocupe por conocer cada uno de estos elementos, porque algunos de ellos aún no los hemos repasado, como las matrices y los objetos anidados dentro de las matrices. Pero si hace clic en esto, podrá ver que, de hecho, encontró este patrón. Si realmente quieres dedicar algo de tiempo a comprender un poco más las expresiones regulares, puedes ver que aquí tiene cosas como los paréntesis. Está buscando a los padres aquí mismo.
+
+Luego, este pequeño d{3}interior de llaves significa que está buscando tres números dentro de esas llaves y luego hará lo mismo aquí con un guión seguido de él y luego otro aquí mismo donde habrá cuatro números. Eso es lo que es. Pero hay cursos completos dedicados a expresiones regulares. Definitivamente no tienes que preocuparte por eso ahora. Pero lo que quiero transmitir es que usted tiene la capacidad de usar la función de coincidencia para ver si algo que desea verificar realmente coincide o no. Esto funciona muy bien y es necesario para cosas como validaciones de formularios web.
+
+Imagina que estás creando una aplicación web y tienes un campo de correo electrónico, algo bastante común. Digamos que desea asegurarse de que alguien no pueda simplemente escribir cualquier conjunto aleatorio de caracteres y esperar que se pueda enviar en el formulario para completar un correo electrónico. Desea poder asegurarse de que lo que escriben coincida con lo que es un correo electrónico. Lo que podría hacer es crear una coincidencia o encontrar un patrón de expresión regular de correo electrónico y luego decir: ¿lo que escribieron coincide? Si es así, déjelo continuar. Si no, dígales que deben ingresar un correo electrónico válido. Ésa es una razón muy común por la que querrías utilizar la función de coincidencia.
+
+El siguiente en la lista es replace. Di que quieres reemplazar algo. esto implica argumentos. El primero es lo que estás buscando. Entonces aquí puedes decir Fox y el segundo argumento separado por una coma es con lo que quieres reemplazarlo. Entonces, si quiero reemplazar Fox con Wolf, ejecutaría esto. Ahora puedes ver que dice que el veloz lobo marrón saltó sobre el perro perezoso.
+
+str.replace( ' zorro ' , ' lobo ' );    // "el veloz lobo marrón saltó sobre el perro perezoso"
+Y también, si lo desea, puede pasar una expresión regular como primer argumento porque hay muchas ocasiones en las que no sabe lo que está buscando. En otras palabras, no estás buscando una palabra específica. Es posible que esté buscando un patrón y luego desee reemplazarlo con algún otro valor. Así que también es muy útil saber eso: el reemplazo de cadenas.
+
+El próximo será la búsqueda. Éste lo voy a copiar de nuevo porque pensé que el ejemplo que mejor funcionaba era el del número de teléfono uno nuevamente. Voy a pegar esto y luego hablaremos de ello.
+
+Aquí tenemos un número de teléfono válido. Y también observe que este patrón de aquí no requiere paréntesis que también permite este tipo de notación de guión aquí. Aquí dice que esta es mi búsqueda de número de teléfono y luego pasamos una expresión regular. Y si ejecuto esto dice cero. Entonces, ¿qué hace exactamente la búsqueda? Bueno, lo que hace la búsqueda es buscar y cuando encuentra un patrón con el que coincide, en realidad devolverá el índice. Entonces cero no significa que no lo encontró. Significa que lo encontró y lo encontró en el índice cero. Ahora, si ejecuto esto nuevamente con solo foo. Ejecuto esto y devuelve uno negativo.
+
+Ahora uno negativo significa que no encontró nada. Entonces, si estás realizando una búsqueda y vas a comprobar si hay esto dentro. Si es así, le dará un índice que comienza en cero y recorre toda su longitud. Y si no es así, te dará uno negativo. También señalaré que es muy similar entre otros lenguajes de programación. Ruby también realiza un tipo de implementación muy similar para la búsqueda y coincidencia de expresiones regulares.
+
+Ahora, en lugar de eso, veamos esto para que sepas que no estoy mintiendo sobre este cero. Digo foo aquí y lo ejecuto, ahora devuelve 4. Eso es porque si contamos, recordemos que este es el índice 0. Entonces, cero, uno, dos, tres y luego cuatro. Entonces, lo que encontró, el patrón que encontró comienza en el índice cuatro y así es como searchfunciona.
+
+Ahora que estamos hablando de índices, profundicemos en ello con indexOf. Si vuelvo a mirar nuestra cadena, la levantaré para que podamos hacer referencia a ella. Ahora podemos pasar una palabra para que pueda decir saltado y ejecutar esto.
+
+str.indexOf( ' saltó ' );    // 20
+Puedes ver que está en el índice 20. Y ahora una cosa a tener en cuenta es que este es el índice 20 pero es el índice de la primera palabra que encuentra. Ahora solo tenemos una palabra saltada, pero déjame crear una nueva cadena aquí. Voy a crear la cadena var 2 y practicaremos nuestra concatenación aquí. Entonces dices str.concat y pasas lo que hicimos antes "una y otra vez".
+
+var str2 = str.concat( ' una y otra vez ' );
+Pero ahora también tenemos esta nueva cadena que en realidad tiene la cadena completa más lo que ponemos al final. Entonces, lo que podemos hacer ahora, lo cual es genial, es si decimos
+
+str2.indexOf( ' otra vez ' );   // 45
+y ejecuta, puedes ver que es 45. Pero ahora también podemos hacer otra función que está bastante cerca de ella, que es lastIndexOf. Y ahora puedes ver que son 55.
+
+str2.lastIndexOf( ' otra vez ' );    // 55
+Cuál es la diferencia, indexOfmira toda la cadena, una vez que encuentra la primera instancia de lo que está buscando, simplemente convierte ese índice, el último índice pasará y revisa cada uno de los patrones o los palabras que estamos buscando. Y luego devuelve el último que encontró.
+
+Eso es algo que es muy útil. Y si alguna vez necesitas encontrarlos todos, eso es lo que vuelve a la función de coincidencia, eso es lo que hace la función de coincidencia. Eso es bastante sobre cómo usar expresiones regulares. Sé que esta es otra guía que tomó un tiempo, así que la detendré ahora mismo y luego terminaremos con la parte 3. Eso terminará con el resto de las funciones de la cadena.
+
+str.repetir( 5 ); // "El rápido zorro marrón saltó sobre el perro perezosoEl rápido zorro marrón saltó sobre el perro perezosoEl rápido zorro marrón saltó sobre el perro perezosoEl rápido zorro marrón saltó sobre el perro perezosoEl rápido zorro marrón saltó sobre el perro perezoso"
+
+str.match( / (( \( \d {3} \) ?)|( \d {3}-))? \d {3}- \d {4} / ) // nulo
+
+' 555-555-5555 ' .match( / (( \( \d {3} \) ?)|( \d {3}-))? \d {3}- \d {4} / ) // (4) ["555-555-5555", "555-", indefinido, "555-", índice: 0, entrada: "555-555-5555"]0: "555-555-5555"1: " 555-"2: indefinido3: "555-"índice: 0entrada: "555-555-5555"longitud: 4__proto__: Matriz(0)
+
+str.replace( ' zorro ' , ' lobo ' ); // “El veloz lobo marrón saltó sobre el perro perezoso”
+
+' 555-555-5555 es mi número de teléfono ' .search( / (( \( \d {3} \) ?)|( \d {3}-))? \d {3}- \d {4} / ) // 0
+
+' Hola, 555-555-5555 es mi número de teléfono ' .search( / (( \( \d {3} \) ?)|( \d {3}-))? \d {3}- \d { 4} / ) // 4
+
+str.indexOf( ' saltó ' ); // 20
+
+str.lastIndexOf( ' saltó ' ); // 20
+
+var str2 = str.concat( ' una y otra vez ' );
+
+str2.indexOf( ' otra vez ' ); // 44 
+str2.lastIndexOf( ' otra vez ' ); // 54
+Recursos
+
+Código fuente
+
 
 
