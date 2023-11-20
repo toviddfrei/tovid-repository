@@ -548,3 +548,89 @@ usuario.grados.codificación = 95 ;
 Recursos
 
 Código fuente
+
+Cómo comprobar tipos de datos en JavaScript
+Verificar el tipo de datos de un componente en JavaScript puede ser muy importante ya que el tipo de datos determina los tipos de funciones que se pueden pasar. En esta guía examinaremos cómo puede verificar los tipos de datos en JavaScript.
+Tareas de guía
+Leer tutorial
+Ver vídeo guía
+Completa el ejercicio
+Play Video
+Ahora que hemos analizado las variables y los distintos tipos de datos relacionados con JavaScript. Veamos cómo podemos saber qué tipo de datos es un elemento específico. Puede que esto no parezca lo más importante, pero en realidad verás a medida que avances en el curso y también a medida que desarrolles proyectos que esto es increíblemente importante porque necesitas poder saber con qué tipo de objeto estás trabajando. con qué tipo de datos estás trabajando.
+
+Porque si no lo sabes, entonces no sabrás qué tipos de funciones puedes invocar, que es algo que estarás haciendo prácticamente todo el día. Así que hablemos de cómo podemos hacer eso. No estoy usando CodePen para este. Estoy usando la consola javascript normal en las herramientas de desarrollo del navegador. La razón es que me gusta cómo muestra los elementos devueltos, no solo los elementos que se imprimen. No quiero registrar en la consola cada uno de estos. Para descubrir esto, vea en qué tipo de datos encaja algo, está el tipo de función, puede pasarle algo. Aquí mismo puedo pasar 12, lo ejecuto y puedes ver que nos dice que 12 es un tipo de número.
+
+tipo de  12 ;
+" número "
+Ahora si paso una cadena
+
+tipo de  ' Astros ' ;
+" cadena "
+me dirá que se trata de una cadena, por lo que es una forma de poder comprobar rápidamente qué tipo de elemento de datos es.
+Si queremos seguir con la línea de algunos de los otros, si desea verificar si algo es booleano, escriba verdadero y le dirá booleano.
+
+tipo de  verdadero ;
+" booleano "
+Podríamos repasar la lista de cada uno de estos. Sólo voy a hacer uno más que es el objeto.
+Si lo hago
+
+tipo de { nombre : " Kristine " };
+" objeto "
+esto me va a decir que esto es un objeto.
+
+Puedes ver que tenemos un número, una cadena, un booleano y un objeto. Esto es algo que es bastante útil, pero probablemente no tenga mucho sentido sobre por qué querrías usarlo. Así que veamos un ejemplo un poco más práctico. Aquí mismo puedo decir que puedes ver que esto no está definido.
+javascript
+var age;
+undefined
+
+
+Ahora imagina un programa donde no todo el código está frente a ti porque muchas veces vas a usar bibliotecas de códigos y no vas a tener una buena lista de cada una de las variables o funciones a las que tienes acceso. y es posible que tampoco sepa qué tipo de datos están devolviendo. Porque imagina un escenario en el que te envían la edad como una cadena. En otras palabras, podría ser 12, pero podría ser 12 representado como una cadena, o podría ser un número entero como nuestro ejemplo o el tipo de datos numérico.
+
+Eso es algo que es muy importante saber. Ahora que tenemos nuestra variable, imaginemos que está en algún otro archivo y ni siquiera podemos verla. Podemos ejecutar un programa y decir
+
+tipo de edad; 
+" indefinido "
+En este momento, no está definido. Indefinido es un tipo que podemos verificar para ver si se ha configurado algo. Si no, será igual a indefinido y luego podremos ir y ver qué hay allí. Otra cosa que también podrías hacer es decir que querías ver si había algún valor dentro que pudieras hacer.
+
+Está establecido age = null
+
+Ahora si digo
+
+tipo de edad;
+" objeto "
+Ahora puedes ver que es un objeto.
+
+Eso es algo a tener en cuenta: null va a devolver un objeto, en este caso, se almacenó en la variable edad. Un buen ejemplo de eso sería, imagina que conoces una aplicación web y no estás seguro de si todos los valores que venían volviendo van a estar llenos.
+
+Sabías a qué tenías acceso, pero no sabías qué elementos realmente tenían algo. Por ejemplo, hablé de si tenías una aplicación web y uno de los atributos era un nombre de usuario de Twitter pero es opcional, puede tener información o no. Si lo tiene, es posible que desees hacer algo como hacer clic en él e ir a la página de perfil de Twitter. Si no existe, no desea que el enlace aparezca en absoluto.
+
+En ese caso, puede verificar si este valor no está definido o, en este caso, ¿ese valor es nulo? Si es así, ni siquiera quiero que muestres ese elemento. Éste es sólo un ejemplo muy básico de por qué este alto nivel de verificación puede ser importante y cuándo puede resultar muy útil. Otro sería el ejemplo de edad que di antes, donde la edad a veces puede ser una cadena o, a veces, un número dependiendo de cuál sea su tipo de datos. Eso determinará qué tipos de funciones puede pasarle.
+
+Esto es algo que es muy importante saber y es bueno tenerlo en cuenta. Estamos empezando a abordar cosas que son un poco más avanzadas, pero no quiero continuar con esto sin darle una idea de cómo verificar los tipos de datos porque Más adelante en el curso, cuando hagamos ese tipo de cosas, quiero que ya tengas una introducción en mente. Así es como puede verificar el tipo de datos de cualquier elemento dentro de un javascript.
+
+tipo de  12 ;
+// "número"
+
+tipo de  ' Astros ' ;
+// "cadena"
+
+tipo de  verdadero ;
+// "booleano"
+
+tipo de { nombre : " Kristine " };
+// "objeto"
+
+edad variable;
+// indefinido
+
+tipo de edad;
+// "indefinido"
+
+edad = nulo ;
+// nulo
+
+tipo de edad;
+// "objeto"
+Recursos
+Código fuente
+
