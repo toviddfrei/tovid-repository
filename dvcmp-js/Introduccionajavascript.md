@@ -786,5 +786,92 @@ Recursos
 
 Código fuente
 
+**Trabajar con funciones de cadena - Parte 1**
+
+Esta guía de la parte 1 explica cómo llamar funciones en cadenas para realizar tareas como buscar valores, encontrar el índice de un carácter y mucho más.
+Tareas de guía
+
+Esta será una guía un poco más larga. Es porque vamos a repasar una serie de funciones relacionadas con el tipo de datos de cadena dentro de un javascript. Antes de entrar en esto, permítame brindarle una descripción general de alto nivel de lo que es una función porque si nunca antes ha programado, puede ser un concepto un poco nuevo.
+
+Básicamente, una función le permite encapsular el comportamiento. En este caso, no somos nosotros quienes realmente creamos las funciones, éstas se proporcionan en la biblioteca principal de JavaScript, por lo que simplemente podemos llamarlas. Más adelante veremos cómo podemos crear nuestras propias funciones. Pero esto debería darles una pequeña introducción porque, esencialmente, lo que vamos a poder hacer es tener un objeto y luego cambiarlo o realizar ciertos tipos de consultas de valor sobre él, todo tipo de cosas. .
+
+Se necesitaría mucho código si tuviéramos que escribirlo todo a mano. Y la otra cosa buena que nos permiten hacer las funciones es realizar una tarea una y otra vez sin tener que repetir ningún código. Esa es una visión de alto nivel de lo que son las funciones. Ahora veremos cómo podemos usarlos en la clase de cadena. Comenzaremos creando una variable llamada str. Voy a igualarlo a una cadena. Vamos a decir "El veloz zorro marrón saltó sobre el perro perezoso".
+
+var str = ' El veloz zorro marrón saltó sobre el perro perezoso ' ;
+Si alguna vez has escuchado esa frase, hay una razón por la que es bastante popular. Esto se debe a que contiene todas las letras del alfabeto, al menos una vez. Así que es una frase popular para usar en programas y también para cosas como bibliotecas de fuentes. Esta es una frase popular que verás. Esta es una pequeña nota al margen, en caso de que alguna vez te hayas preguntado de dónde viene ese tipo de oración.
+
+Lo primero que voy a hacer en realidad no será una función. Lo primero que voy a hacer es llamar a lo que será un atributo de la cadena. Esta será la longitud de una cuerda. Si simplemente agrega un punto y coma al final, verá que tiene cuarenta y cuatro caracteres.
+
+str.longitud;   //44
+Ahora, la razón por la que sé que esto es un atributo y no una función es porque si intentara poner paréntesis al final, que es lo que haría si fuera una función, llame y presione regresar, obtendrá un error. Incluso te dice que eso .lengthno es una función. Eso no es algo que sea de vital importancia saber en este momento, pero el resto de las funciones que voy a repasar tienen el paréntesis al final. Quería aclarar por qué la longitud no. Correr str.lengthes algo que harás bastante. Es algo que puedes verificar para ver exactamente qué tan larga es la cadena con la que estás trabajando.
+
+Imagine un escenario en el que estuviera reconstruyendo un sitio como Twitter. Desea que verifique para asegurarse de que una determinada cadena no supere el límite de caracteres, de la misma manera que lo hace Twitter. Usar la longitud de la cadena es una forma rápida y eficiente de hacerlo.
+
+El resto serán todas funciones. Seguirá el patrón de tener padres al final. A veces también le pasaremos un argumento.
+
+El primero que usaremos se llama a, charAtque es la abreviatura de personaje. Si lo hago string.charAty paso 2, entonces presiono regresar. Esto trae "e".
+
+str.charAt( 2 );       //"mi"
+Esto requerirá un poco de explicación. Si nunca antes ha trabajado con un índice. Lo que esencialmente hicimos aquí, con esta cadena llamando charAty pasando esto 2, significa que queremos cualquier letra que esté allí, cualquier elemento que esté allí, queremos cualquiera que esté en el índice de dos.
+
+Eso parece bastante sencillo hasta que llegas a nuestra oración y cuentas. Uno es t, h es dos y e es tres. Pero pedimos dos y devolvió la E. Si bien hay una buena explicación para eso y es que en informática la mayoría de las veces todos los índices comienzan con lo que se llama a, lo que significa que el primer elemento no va zero-indexa ser un índice de uno. Es un índice de 0. Entonces, el siguiente será uno y el siguiente será dos.
+
+Esa es la razón por la que recibimos "e"cuando dijimos carácter en 2 porque técnicamente esto tiene un índice de 2. Puede que no sea el segundo elemento, pero desde una perspectiva informática es el índice de dos. Ahora bien, eso es algo que es muy importante recordar porque no solo será importante cuando tomes un carácter como este, sino que esta es exactamente la forma en que cuando trabajamos con la estructura de datos de la matriz, las matrices comienzan con un cero. índice también.
+
+Si va y se equivoca en un valor, es muy posible que esta sea la razón. Tienes que asegurarte de empezar siempre desde cero. Así que eso es carácter, y no voy a dedicar tanto tiempo a cada uno de estos elementos, es porque era un tema muy importante porque se relaciona con casi todo tipo de algoritmos de conteo y cosas así en ciencias de la computación. .
+
+El próximo todavía lo será charAt, pero veamos qué sucede si paso un índice que supera cualquier índice existente. A veces me gusta incluirlos porque muchas veces es importante saberlo porque quieres tener algo de confianza. Si llama a un índice que no existe, ¿recibirá un error? ¿O qué va a pasar? Bueno, si presiono regresar, puedes ver que esto simplemente devuelve una cadena vacía. Esto es bueno, pero a veces también puede resultar confuso.
+
+A veces casi desearía que devolviera un valor nulo o arrojara algún tipo de error, lo que puede ser confuso acerca de esto es que digamos que lo hice.
+
+str.charAt( 3 );     //" "
+Puedes ver que puede que no sea una cadena vacía, técnicamente es un espacio, pero está bastante cerca de cuando pasamos algo que no tenía nada allí. Esto es algo que debe tener en cuenta si alguna vez tiene que implementar algún tipo de ejercicio de codificación, o algún programa, en el que pueda terminar en una situación a la que llama índice que puede no existir, obtendrá un cadena vacía de nuevo en ese caso. Es importante comprender que eso no significa que haya encontrado algo, simplemente significa que no se devolvió nada en ese valor de índice.
+
+El siguiente se llama concat. Y esto es la abreviatura de concatenar. Si lo hago
+
+str.concat( ' una y otra vez ' );
+Ahora puedes ver que ha combinado lo que pasamos como argumento para concat y lo agregó al final de nuestra cadena donde ahora está el veloz zorro marrón saltando sobre el perro perezoso una y otra vez. Ahora una gran pregunta que hacer ahora mismo sería: ¿hemos cambiado permanentemente el valor de la cadena? Hay una manera bastante rápida de descubrirlo. Simplemente escriba str;y podrá ver que vuelve al mismo valor que cuando lo asignamos. Es muy importante saber eso porque si ejecuta concat pensando que está cambiando la cadena, en realidad no lo está, simplemente está cambiando el valor que se devolvió al ejecutar esa función concaten él.
+
+Si quisieras conectar permanentemente a esos dos, entonces querrías hacer algo como
+
+var newStr = str.concat( ' una y otra vez ' );
+Y eso lo pone en una nueva cadena, su nueva cadena ahora contiene esos valores. Pero la cadena preexistente no, así que eso es algo muy importante y ese es el caso de cada una de estas funciones de cadena que vamos a cubrir. Ese fue Concat.
+
+Ahora entremos en algunos partidos. Esto nos permitirá ver si hay algún valor incluido en la cadena. Esto es algo que es muy común de hacer. Digamos que estás trabajando con una cadena y quieres ver si contiene este otro valor que estoy buscando.
+
+Si corro str.includes();y paso rápido. Esto simplemente volverá a ser cierto.
+
+str.incluye ( ' rápido ' );   // verdadero
+Pasa por nuestra cadena, y encuentra rápido allí mismo, y dice, sí, incluye eso. Ahora, si volviera a ejecutar str.includes();y pasara foo, que no existe, devuelve falso. Así que include es un tipo de función muy agradable y sencillo en el que pasas lo que estás buscando. Si incluye ese valor, devuelve verdadero. Si no, devuelve falso.
+
+Ahora existen algunas formas más personalizadas de hacer esto. Hemos incluido, pero también tenemos una función llamada startsWith. startsWithes muy similar excepto que en lugar de mirar a través de toda la cadena. Solo mira hacia el frente. Si paso "el", devuelve verdadero porque comienza con eso. Si paso rápido, devuelve falso porque, aunque está en la cadena, no inicia la cadena.
+
+Ahora, esto tiene una especie de contrapositivo aquí que es endsWith. Tenemos startsWithy endsWith. Cuando sea rápido, será falso. Si es un perro, será cierto, lo cual probablemente ya te habrás dado cuenta. Pero ¿y si es sólo "g"? Eso también es cierto. No busca palabras, solo verifica carácter por carácter. Si lo dijera str.endsWith('lazy dog');también es cierto.
+
+Eso es algo importante, porque si simplemente lo miras, miras todas estas palabras, puedes pensar: "Oh, está buscando la última palabra y necesito tener la última palabra para ponerla allí". . Pero es posible que estés revisando algunos archivos de datos sin procesar y quieras saber cuáles terminan en punto y coma, o algo así. Esta es una forma rápida y agradable de hacerlo. Te recomiendo que los revises nuevamente. Juega con ellos, mira cómo puedes cambiarlos para manipular el texto.
+
+var str = ' El veloz zorro marrón saltó sobre el perro perezoso ' ;
+
+str.longitud(); // VM2349:1 TypeError no detectado: str.length no es una función
+
+str.longitud; // 44
+
+str.charAt( 2 ); // "e"
+
+str.charAt( 200 ); // ""
+
+str.concat( ' una y otra vez ' ); // “El veloz zorro marrón saltó una y otra vez sobre el perro perezoso”
+
+cadena; // “El veloz zorro marrón saltó sobre el perro perezoso”
+
+str.incluye ( ' rápido ' ); // verdadero
+
+str.endsWith( ' perro ' ); // verdadero
+
+str.startsWith( ' Foo ' ); // FALSO
+Recursos
+
+Código fuente
+
 
 
