@@ -1051,5 +1051,165 @@ Código fuente
 
 Lista completa de funciones de cadena
 
+#Operadores aritméticos de JavaScript
+
+Esta guía examina la lista completa de operadores aritméticos de JavaScript. Estos operadores permiten que los programas realicen cálculos y puedan actualizar números.
+Tareas de guía
+Leer tutorial
+Ver vídeo guía
+Completa el ejercicio
+Play Video
+En esta lección, estamos haciendo la transición y comenzamos a trabajar con el tipo de datos numéricos en javascript y específicamente, vamos a analizar los distintos operadores aritméticos disponibles para que podamos realizar cálculos.
+
+Algunos de estos son muy básicos, pero más adelante veremos algunos tipos de operadores más avanzados. Comenzaremos con los más básicos y mantendré los números muy simples para que todo tenga sentido.
+
+2 + 2 ; // 4
+No es de extrañar que eso equivalga a cuatro. Y esa es la sintaxis. Ahora también puedes ponerlos entre paréntesis y funcionarán exactamente de la misma manera. Y esto significará mucho más cuando empecemos a hablar del orden de las operaciones. Y cuando queremos que se realicen ciertos cálculos versus otros, lo guardaremos para otra guía.
+
+El siguiente que vamos a hacer es simplemente
+
+2-3 ; _ _ // -1
+Eso nos dará -1 solo para demostrar que también tienes la capacidad de trabajar con números negativos.
+
+ahora si voy
+
+10/2 ; _ _ // 5
+Hasta ahora nada de esto es una locura. Se trata más bien de recorrer la sintaxis.
+
+Ahora para la multiplicación. Usamos los asteriscos y usamos un solo asterisco.
+
+2 * 10 ; // 20
+Y la razón por la que usamos un solo Asterix es porque cuando quieras usar exponentes usarás dos asteriscos.
+
+Si lo hago
+
+2 ** 10 ; // 1024
+Así es como puedes usar exponentes.
+
+Ahora, lo siguiente que voy a hacer puede parecer un poco extraño porque en realidad existe lo que se llama un módulo o un operador de resto en Javascript. Y eso nos permitirá hacer algo como esto.
+
+5 % 2 ; // 1
+Esto nos da un resto de 1 que es exacto.
+
+Ahora si eres como muchos estudiantes cuando ves ese OPERADOR. Lo primero que puede venir a tu cabeza es que nunca puedo imaginar un momento en el que necesite saber cuál es el resto de algo. Y técnicamente eso parece lógico. Sin embargo, voy a mostrarles una razón muy práctica por la cual este es un tipo de herramienta muy poderosa cuando se usa correctamente.
+
+Imagine que tiene una lista de números y dice que tiene una tabla y desea mostrar todos los demás registros. Piense en algo parecido a Excel, digamos que está creando una tabla que se muestra en una aplicación web y desea todos los demás elementos de la tabla. Entonces, ya sea que los elementos pares o los elementos impares quieran que tengan un color de fondo diferente. Bueno, ¿cómo te vas a dar cuenta? Qué registros son pares y cuáles son impares. Bueno, técnicamente, si usas el operador de módulo correctamente, siempre lo sabrás porque si haces algo como decir 10 % 2esto será igual a 0. Ahora veamos 22222 % 2que también es 0. Si lo haces 6 % 2, también es 0.
+
+10 % 2 ;
+0
+22222 % 2 ;
+0
+6 % 2 ;
+0
+Aquí es donde ves que el operador de módulo se usa más, siempre que necesitas encontrar si un número es par o impar porque si es par siempre tendrá un resto de cero cuando sea un número % 2. Así que eso es algo que es muy útil y de hecho se ve en bastantes ejercicios de programación. Así que es bueno tenerlo en cuenta y es entonces cuando querrás volver a usarlo. Esos son los principales operadores.
+
+Ahora vamos a entrar en algunos de los que son un poco diferentes. Quizás no los hayas visto antes o realmente no hayas pensado en usarlos. Voy a crear una variable llamada var num. Déjame establecerlo en 2. Y ahora voy a usar lo que se llama incrementoperador. Entonces aquí puedo decir num++; y esto va a ir en aumento. Pero hay un pequeño giro en esto. Entonces, si presiono regresar, puedes ver que devuelve 2.
+
+número de var = 2 ;
+indefinido
+número++;
+2
+Lo que sea que se muestra en la consola y es por eso que he estado usando la consola últimamente en lugar de codepen. Y estás perfectamente bien usando CodePen, pero cuando lo haces tienes que cerrar sesión en la consola y eso lleva más tiempo. Aquí mismo preferiría que vieras inmediatamente lo que se devuelve. Esto significa que pones esto en una función o lo llamas desde algún otro lugar. Este es el número que se devuelve, que es 2.
+
+Pero eso no tiene ningún sentido porque empezamos a las dos. Ahora les voy a mostrar algo que parece realmente extraño. Si imprimo el número nuevamente y presiono regresar, son tres.
+
+número;
+3
+Aquí no pasó nada. Aquí no cambió a tres. Tan pronto como llamé, Incrementesto lo cambió. pero devuelve el valor preexistente. Entonces, cada vez que usas el incrementador, lo pones en lo que se llama notación postfija, lo que significa que el operador se coloca al final. Entonces el número que se devuelve es el primer número del número preexistente. Todavía hace su trabajo, todavía lo incrementa. Pero esto es algo en lo que, por ejemplo, desea conservar una copia de la variable. Podría tener una copia de la antigua versión preincrementada previa al cambio. Puede almacenarlo y luego se cambiará su nuevo número. Ese es un ejemplo de cuando querrías usarlo pero ahora diré que no es muy intuitivo. Realmente no te gusta eso. Bueno, tienes lo que se llama notación de prefijo y ahí es donde pones a los operadores por adelantado.
+
+++núm;
+4
+Ahora puedo llamar a num y mirar eso. Ahora son cuatro. Así que aquí eran tres y ahora son cuatro, pero también devuelve cuatro. Normalmente uso la notación de prefijo porque la mayoría de las veces simplemente olvido que la notación de postfijo la cambia. Hace su incremento pero luego devuelve el valor anterior. Solo he tenido algunas ocasiones en las que realmente necesitaba ese tipo de comportamiento. Normalmente, la notación de prefijo es el tipo de sintaxis que uso, pero es bueno saber que ambas están ahí.
+
+Ahora que tenemos cuatro, usemos el Decrementeroperador para poder hacer num y luego dos signos menos y esto tendrá el mismo comportamiento. ¿Qué crees que va a pasar? Al ver todo esto, al ver todo lo que está pasando aquí, lo que va a pasar con este decrementoperador. Piénsalo. Voy a presionar regresar y ver qué pasa. Parece que no pasó nada. Bueno, probemos esa hipótesis, si escribo num nuevamente podemos ver que sí la cambió. Lo reduce en uno, pero como usamos la notación postfix funcionó exactamente igual que cuando hicimos el Incrementor. Ahora, si queremos hacer algo como lo hicimos antes y realmente el valor de retorno imita lo que queremos, podemos hacer
+--num; Y ahora lo reduce a dos, que es el valor. Entonces lo decrementeditó y nos dio el valor que esperábamos como valor devuelto.
+
+--núm;
+2
+Ahora no queremos que se confunda demasiado al comprender lo que significa que se devuelva algo. Vamos a profundizar en qué es eso y cómo trabajar con valores de retorno y realmente cuál es todo el flujo de trabajo cuando lleguemos al módulo de funciones. Entonces es cuando vamos a hacer eso por ahora, solo sepamos que el valor que se devuelve es un valor con el que realmente podemos trabajar. Podemos almacenarlo en una variable, podríamos ponerlo en una función y podríamos hacerle lo que quisiéramos. Pero por ahora, comprenda que ese es un valor que regresa a nosotros después de haber ejecutado cualquier proceso que estemos ejecutando.
+
+Ahora también hay una pequeña advertencia para and incrementorthe decrementery es que debes llamarlo en una variable. Mira lo que pasa si hago esto 2++;
+
+imagen
+
+que nos da un error de expresión no válida del lado izquierdo del error de referencia no detectada en la operación postfix.
+
+Ahora bien, si piensas en esto, tiene sentido porque si alguna vez tuviste un valor real codificado, tenías un número, no una variable que almacenaba un número. De hecho, teníamos un número. ¿Por qué querrías utilizar el incremento o el decorador? Porque si realmente conocías el número y eras tú quien lo escribía en el programa, no lo generaba, no era dinámico porque no estaba en una variable. Si desea uno más que dos, puede escribir tres.
+
+Eso es sólo una pequeña advertencia, una pequeña nota al margen para que puedan pensar detenidamente, hay una diferencia entre las variables y los números que almacenan. Recuerde que las variables son contenedores especiales que pueden contener valores. Ahora que tenemos todo eso, hemos pasado por los operadores tradicionales, hemos pasado por incrementorsy decrementers. Sólo nos quedan algunas funciones más por las que vamos a repasar. La próxima será una manera de invertir los valores para obtener un valor negativo. Voy a llamar a var y luego a someNum = 10.
+
+Y ahora si quiero asignar esto pero quiero lo contrario. En este caso, quiero negativo 10. Entonces puedo hacer esto, puedo decir var someOtherNum y luego simplemente hacer menos y luego algo de entumecimiento. Y ahora si llamo. Algún otro Núm. esto nos da menos 10.
+
+var algúnNum = 10 ;
+indefinido
+var algúnOtroNum = -algúnNum;
+indefinido
+algúnOtroNum;
+- 10
+Eso puede ser lo que esperabas, pero solo quería mostrarte que eso era posible. Ya hemos hecho referencia a este cuando hablábamos de convertir diferentes cadenas en números. Pero quería cubrir el unaryoperador una vez más, simplemente porque es algo muy poderoso y lo verán bastante en el código. Es bueno tener una buena idea de ello.
+
+voy a decir
+
+var númerocadena = ' 100 ' ;
+indefinido
+Ahora si quiero convertirlo, puedo decir
+
+var Numconvertido = + strNum;
+indefinido
+Ahora si solo quiero verlo.
+
+convertidoNum;
+100
+Puedes ver que ya no es una cuerda. Ahora forma parte del tipo de datos numérico. Además, no tenías que ponerlo en una variable, esa es simplemente la convención común que normalmente verás porque es bastante raro que solo tengas código, por ejemplo, digamos que acabamos de tener Esto funcionaría pero yo + strNum;quería para mostrarle el tipo de sintaxis que normalmente se verá en la naturaleza. Por lo general, cuando convierte diferentes tipos de datos, generalmente los coloca en una variable para usarlos en una función o algo así.
+
+En esta guía, solo como una revisión rápida, cubrimos todos los operadores aritméticos básicos desde Más( +) hasta el %operador de módulo( ). Hablamos sobre incrementorsy decrementersque nos permiten aumentar o disminuir valores en 1 y luego también hablamos sobre cómo podemos invertir los valores. Y terminamos viendo cómo podemos convertir un número basado en cadenas en un número.
+
+2 + 2 ; // 4
+
+2-2 ; _ _ // 0
+
+2/2 ; _ _ // 1
+
+2 * 10 ; // 20
+
+5 % 2 ; // 1
+
+10 % 2 ; // 0
+
+8 % 2 ; // 0
+
+2 ** 10 ; // 1024
+
+número de var = 2 ;
+
+número++; // 2
+
+++núm; // 4
+
+número; // 4
+
+número--; // 4
+
+número; // 3
+
+--núm; // 2
+
+2 ++; // VM3506:1 Error de referencia no detectado: expresión del lado izquierdo no válida en operación postfix
+
+++ 2 ; // VM3508:1 Error de referencia no detectado: expresión del lado izquierdo no válida en la operación de prefijo
+
+var algúnNum = 10 ;
+
+var algúnOtroNum = -algúnNum;
+
+algúnOtroNum; // -10
+
+var númerocadena = ' 100 ' ;
+
+var Numconvertido = + strNum;
+
+convertidoNum; // 100
+Recursos
+Código fuente
 
 
