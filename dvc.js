@@ -38,3 +38,17 @@ var str2 = str.concat('again and again');
 
 str2.indexOf('again'); // 44
 str2.lastIndexOf('again'); // 54
+
+str.slice(4, 10); // "quick "
+
+str.slice(-8); // "lazy dog"
+
+str.slice(10); // "brown fox jumped over the lazy dog"
+
+str.toUpperCase(); // "THE QUICK BROWN FOX JUMPED OVER THE LAZY DOG"
+
+str.toLowerCase(); // "the quick brown fox jumped over the lazy dog"
+
+var messyString = '    Hi there    ';
+
+messyString.trim(); // "Hi there"
