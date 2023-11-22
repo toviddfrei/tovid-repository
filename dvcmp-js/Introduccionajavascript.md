@@ -959,5 +959,97 @@ Recursos
 
 Código fuente
 
+# Trabajar con funciones de cadena - Parte 3
+
+Esta es la guía final del módulo de funciones String. En esta lección, analizaremos las funciones de corte, mayúsculas y minúsculas. También examinaremos cómo podemos encadenar funciones.
+Tareas de guía
+Leer tutorial
+Ver vídeo guía
+Completa el ejercicio
+Play Video
+Bienvenido de nuevo a este tercer y último vídeo sobre cómo trabajar con funciones de cadena en javascript. Este también debería ser un poco más corto, solo tenemos algunos elementos que quería cubrir.
+
+La primera es la slicefunción, así que escribiré cadena o cadena porque ese es el nombre de mi segmento de puntos variable. Ahora tenemos algunas opciones diferentes. Entonces, tenemos tres formas en que podemos usar el segmento, la primera es simplemente pasar un valor de índice y lo que hará es devolver todos los elementos a la derecha de ese.
+
+str.slice( 10 );
+" El zorro marrón saltó sobre el perro perezoso "
+Así que simplemente hagamos
+
+str.charAt( 10 );
+" b "
+para ver dónde está eso. Esa es la b, por lo que toma la b hasta el final. Esa es una manera agradable y fácil si sabes que tienes algunos valores que quieres omitir y no te importan y solo quieres desde ese punto hasta el final. Slicecon un solo valor te dará eso. Y es ese valor del índice.
+
+Ahora, la otra forma en que podríamos hacer esto es retroceder. Digamos que tenemos una cuerda gigante y no queremos contarla de izquierda a derecha. Y también en otro momento en el que eso resulta muy útil es decir que tenemos un conjunto de cuerdas. Entonces podría ser un número de seguro social o algo así. Y sabemos que siempre obtendremos, digamos, los últimos cuatro o cinco dígitos. Siempre serán exactamente iguales. Y sólo queremos esos.
+
+Bueno, podemos trabajar de derecha a izquierda usando negativos. Así que aquí voy a decir 8 negativo y ejecutar esto.
+
+str.slice(- 8 );
+" Perro perezoso "
+Puedes ver que regresa el perro perezoso. Hasta ahora esas son dos opciones diferentes, una de ellas te da todos los elementos y estás contando de izquierda a derecha. Si usas negativos estás contando hacia atrás. Pero al final del día, básicamente sigues encontrando un índice y devuelve todo desde ese índice hasta el final hacia la derecha. Incluso si cuentas de izquierda a derecha o de derecha a izquierda.
+
+La última opción es tomar un trozo dentro de la cuerda. Entonces, digamos que solo quería la palabra rápido aquí y sabía que se trataba de un índice del 4 al 10. La forma en que podría hacer esto es pasando dos argumentos. Entonces podría hacerlo str.slicey si quiero rápido puedo hacer cuatro porque contando de izquierda a derecha esto es 0 1 2 3 4. Y luego si quiero 10 contemos 0 1 2 3 4 5 6 7 8 9 10. Entonces si Ejecute esto y podrá ver que regresa rápidamente y tiene un pequeño espacio después.
+
+str.slice( 4 , 10 );
+" rápido "
+Ahora podemos refinar eso un poco y podemos decir de cuatro a nueve, ejecutarlo. Y es rápido por sí solo.
+
+str.slice( 4 , 9 );
+" rápido "
+Ahora, esto también trae a colación algo que es un poco útil.
+
+La siguiente función de la que quiero hablar es el trimmétodo. Digamos que tengo una nueva variable, la llamaré cadena desordenada y tiene un montón de espacios vacíos en el medio. Tiene este valor foo y luego a la izquierda tiene todos estos espacios y luego a la derecha, tiene todos estos espacios.
+
+var cadena desordenada = '     foo      ' ;
+indefinido
+Si llamo a messyString puedes ver que mantiene todos esos espacios.
+
+cadena desordenada;
+"     foo     "
+Pero si llamo a messyString y luego trimlo llamo, esta trimfunción devolverá "foo". Así que recortar es una función muy útil. Descubrirá que es increíblemente beneficioso cuando desee limpiar los datos del usuario porque hay muchas ocasiones en las que me dan una base de datos o un archivo sin formato y tiene cadenas a izquierda y derecha y recortar lo hace muy agradable y fácil de limpiar. Entonces eso es útil.
+
+Ahora veamos cómo podemos combinar algunas de estas funciones. Ahora recuerda con una cuerda cuando llamé corte y pasado del 4 al 10, ¿recuerdas cómo eso trae, rápido con el espacio extra al final? Bueno, de hecho puedo encadenarlos, así que si digo recortar y ejecutar esto.
+
+str.slice( 4 , 10 ).trim();
+" rápido "
+Observe cómo esto ahora lo ha limpiado a pesar de que todavía estamos pasando de cuatro y diez.
+
+Una de las cosas más importantes que quería mostrarles allí mismo es que estas funciones se pueden encadenar. Y a medida que avance en su viaje de desarrollo de JavaScript, descubrirá que cambiará los métodos a la izquierda y ahora debe tener mucho cuidado con eso. Hay muchas ocasiones en las que la gente se sale de control con esto y se vuelve muy confuso y muy difícil de depurar.
+
+Hay algunos principios recomendados que dicen que nunca querrás tener más de dos o tres elementos diferentes encadenados. Cualquier cosa por encima de eso puede generar algunos errores muy difíciles de corregir y también es muy difícil refactorizar ese código y limpiarlo. Pero habrá ocasiones en las que querrás hacer cosas como esta, en las que hicimos slicealgo y luego llamamos trimpara asegurarnos de que tuviéramos algunos valores limpios y agradables después. Entonces esa es la slicey luego la trimfunción.
+
+Sólo tenemos dos más que vamos a cubrir.
+
+El primero será toUpperCaseasí, cuando llames a esto, hará exactamente lo que pensabas. Convertirá todos los valores a mayúsculas.
+
+str.toUpperCase();
+" EL ZORRO MARRÓN RÁPIDO SALTO SOBRE EL PERRO PEREZOSO "
+Ahora también tenemos la opción de ejecutar toLowerCasey puedes ver que todo está en minúsculas.
+
+str.toLowerCase();
+" El veloz zorro marrón saltó sobre el perro perezoso "
+Originalmente, si hace referencia a la línea superior, solo teníamos un elemento que estaba en mayúsculas, por lo que uno se redujo a minúsculas y todos los demás simplemente permanecen iguales.
+
+En los últimos tres videos, cubrimos todas las funciones principales relacionadas con los tipos de datos de cadena. Muy buen trabajo pasando por eso. También incluiré en esta guía un enlace a la documentación que muestra todas las funciones restantes.
+
+Ahora bien, no incluí todos y cada uno porque eso habría llevado aún más tiempo y pasamos bastante tiempo y quiero comenzar a pasar a otras cosas como el tipo de datos numéricos, pero también algunos de los que omití estaban relacionados. a cosas como la conversión a una ubicación internacional específica para hacer cosas como esa. Y sé que eso no se aplica a todos. Así que no dudes en consultar la documentación. Y como siempre pondré un enlace al código fuente y luego también al código real que acabamos de ver en la guía escrita.
+
+str.slice( 4 , 10 ); // "rápido "
+
+str.slice(- 8 ); // "Perro perezoso"
+
+str.slice( 10 ); // "el zorro marrón saltó sobre el perro perezoso"
+
+str.toUpperCase(); // “EL RÁPIDO ZORRO MARRÓN SALTO SOBRE EL PERRO PEREZOSO”
+
+str.toLowerCase(); // "el veloz zorro marrón saltó sobre el perro perezoso"
+
+var messyString = '     Hola     ' ;
+
+cadena desordenada.trim(); // "Hola"
+Recursos
+Código fuente
+
+Lista completa de funciones de cadena
+
 
 
