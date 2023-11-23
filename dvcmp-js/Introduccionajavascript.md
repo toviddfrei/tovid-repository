@@ -1212,4 +1212,77 @@ convertidoNum; // 100
 Recursos
 Código fuente
 
+# Guía de operadores de asignación compuestos en JavaScript
+
+Esta lección examina cómo trabajar con el operador de asignación compuesto en JavaScript.
+
+Ahora que hemos hablado de operadores. Hablemos de algo llamado compound assignmentoperador y haré un pequeño cambio aquí en caso de que se pregunte si alguna vez desea que su consola ocupe toda la ventana, arriba a la derecha, aquí puede desacoplarla. en una ventana separada y puedes ver que ocupa toda la ventana.
+
+Así que ahora tenemos un poco más de espacio.
+
+Además, tengo otra cosa que les mostraré en las notas del programa. Le daré acceso a todo este conjunto de operadores de asignación, pero aquí veremos algunos ejemplos. Voy a utilizar toda la ventana sólo para que sea un poco más fácil de ver.
+
+Hablemos de lo que assignmentes. Hemos estado usando la asignación desde que comenzamos a escribir código javascript. Probablemente estés bastante acostumbrado. La tarea consiste en decir algo como var name y luego configurar un nombre
+
+var nombre = ' Tiffany ' ;
+Y esa es la asignación, los iguales representan la asignación.
+
+Ahora javascript nos brinda la posibilidad de tener la asignación regular pero también de que esa asignación realice tareas. Entonces, por ejemplo, digamos que desea sumar elementos, digamos que queremos sumar un conjunto total de calificaciones para ver el número total de puntuaciones. Puedo decir var sum y asignarle igual a cero.
+
+suma var = 0 ;
+Y ahora creemos algunas calificaciones.
+
+Voy a decir var gradeOne = 100.
+
+var gradoUno = 100 ;
+y luego var gradoTwo = 80.
+
+var gradoDos = 80 ;
+Ahora, con ambos elementos en su lugar, digamos que queríamos agregarlos. Si desea simplemente sumar ambos, definitivamente podría hacer algo como suma = (gradoUno + gradoDos); y eso funcionaría.
+
+Sin embargo, una cosa que quiero mostrarles es que hay muchas ocasiones en las que no se tiene el grado uno o el grado dos en una variable. Es posible que los tenga almacenados en una base de datos y luego recorrerá ese conjunto completo de registros. Por eso es necesario poder agregarlos sobre la marcha. Y eso es lo que compound assignmentpuede hacer un operador.
+
+Usemos uno de los más básicos que es tener la tarea de suma.
+
+suma += gradoUno; // 100
+Ahora puedes ver que la suma es igual a 100.
+
+Entonces si lo hago
+
+suma += gradodos; // 180
+Si tuviéramos 100 calificaciones, simplemente podríamos agregarlas así.
+
+Básicamente, esto equivale a una abreviatura de decir algo como
+
+suma = suma + lo que sea que diga el siguiente, que tuviéramos un grado tres, sería lo mismo que hacer eso. Entonces está realizando una tarea, pero también está realizando una operación. Esa es la razón por la que se le llama operador de asignación compuesta.
+
+Ahora, además de tener la posibilidad de resumir elementos, también puedes hacer lo mismo con los demás operadores. De hecho, literalmente, cada uno de los operadores que acabamos de ver puede usarlos para realizar esta tarea compuesta. Digamos que quieres hacer una multiplicación, puedes sumar astriz igual y luego grado dos y ahora puedes ver que es igual a catorce mil cuatrocientos.
+
+suma *= gradodos; // 14400
+Esto es exactamente lo mismo que hacer suma = cualquiera que sea el valor de la suma multiplicado por grado dos. Eso le brinda exactamente el mismo tipo de proceso, así es como puede usar los operadores de asignación compuesta. Y si hace referencia a la guía que se incluye en las notas del programa. Puedes ver que los tenemos para cada uno de estos, desde iguales regulares hasta el uso de exponentes.
+
+Entonces, por ahora no te preocupes por los elementos inferiores. Estos se están adentrando en tipos de campos mucho más avanzados, como bitwiseoperadores y asignaciones de turnos a derecha e izquierda. Entonces, todo en lo que deben concentrarse está en la parte superior de cómo vamos a hacer esto. Esto es algo que verás en un código javascript. Quería incluirlo, para que cuando lo veas no sientas curiosidad por saber qué está sucediendo exactamente.
+
+Es una excelente sintaxis abreviada para cuando quieras realizar una tarea pero también realizar una operación al mismo tiempo.
+
+var nombre = ' Tiffany ' ;
+
+suma var = 0 ;
+
+var gradoUno = 100 ;
+
+var gradoDos = 80 ;
+
+suma += gradoUno; // 100
+
+suma; // 100
+
+suma += gradodos; // 180
+
+suma *= gradodos; // 14400
+Recursos
+Documentación para operadores de asignación compuesta
+
+Código fuente
+
 
