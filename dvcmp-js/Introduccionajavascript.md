@@ -1374,3 +1374,113 @@ Recursos
 
 Código fuente
 
+# Introducción a la sección condicional de JavaScript
+
+Hola y bienvenido a la sección sobre condicionales en JavaScript. Ahora, los condicionales son uno de los componentes más fundamentales de cualquier tipo de lenguaje de programación.
+
+La razón de esto es que conditionalsle permite tener un comportamiento dinámico en su aplicación. Esto también es algo con lo que se puede tener una analogía en un escenario de la vida real. Nos ocupamos de condicionales todo el día.
+
+Ni siquiera en lo que respecta a la programación, pero si estás conduciendo por la calle y ves que llegas a un semáforo en rojo, en realidad estás ejecutando un condicional en tu cabeza donde dices: "si el semáforo está en rojo, entonces Voy a parar."
+
+grande
+
+Los condicionales en programación funcionan de manera muy similar. Supongamos que está creando un programa para una empresa de alquiler de automóviles y la empresa de alquiler de automóviles dice que si la edad del conductor es menor de 25 años: no puede alquilar ese automóvil. Eso es un condicional.
+
+grande
+
+Ahora, comenzaremos con esos tipos básicos de escenarios y luego también los ampliaremos a algunos tipos de conceptos más avanzados, como los condicionales compuestos. Para tomar ese auto de alquiler, por ejemplo, digamos que tiene una póliza que le permite alquilar un auto si tiene entre 25 y 80 años.
+
+Bueno, en realidad puedes construir un condicional compuesto que verifique ambos escenarios. Por lo tanto, puede asegurarse de que un punto de datos encaje dentro de un área predeterminada. Al final de la sección vamos a ampliar nuestros conocimientos y vamos a hablar de switch statements. Así que pasaremos la mayor parte de nuestro tiempo trabajando con if-else conditionals.
+
+Esos serán los que usarás probablemente alrededor del 95% del tiempo. También existe este concepto en JavaScript llamado switch statement, por lo que vamos a examinar cómo se puede trabajar con ellos. También usaré un ejemplo de un proyecto de la vida real que construí personalmente, para que puedas ver cuándo querrás usar un tipo de condicional frente a otro.
+
+# Sintaxis básica para usar condicionales en JavaScript
+
+Esta guía explica la sintaxis para usar condicionales en JavaScript. Incluyendo el examen del conjunto completo de operadores de comparación.
+
+Como mencioné en la introducción, esta sección tratará sobre condicionales.
+
+Los condicionales nos dan la posibilidad de mirar un par de valores o incluso varios. Tres, cuatro o cinco, dependiendo de lo que necesite comparar y ver cómo se relacionan entre sí. Podemos ver si son iguales entre sí si uno es mayor que el otro.
+
+Podemos verificar si explícitamente no son iguales entre sí y luego también en JavaScript tenemos la capacidad de verificar si también son del mismo tipo. Hablemos de cómo podemos probar esto y cuál es la sintaxis.
+
+Aquí voy a hacer uno bastante básico y diré var edad y diremos 12 años y luego diremos var edad Dos, este dirá es igual a 15.
+
+var edad = 12 ;
+var edadDos = 15 ;
+Ahora, cuál es la sintaxis para verificar si los elementos son iguales, podemos decir si la edad también es igual a la edad y luego usamos llaves para decir console.log, son iguales.
+
+Entonces, si ejecutamos esto, no debería ejecutar absolutamente nada porque no son iguales. Ahora, si cambio esto a 12 hit-run, puedes ver que se imprime que son iguales porque se cambiaron los valores.
+
+grande
+
+Esta es la sintaxis básica. Ahora, además de iguales, también tenemos lo que se llama triples iguales (===). Si hago tres iguales, esto verificará (se llama igualdad estricta) cuál es el nombre del operador o el operador de comparación.
+
+Ahora, si presiono ejecutar, puedes ver que se imprime una vez más y son iguales. Todo allí tiene bastante sentido.
+
+Ahora, si envuelvo ageTwo como una cadena y presiono ejecutar nuevamente, no se imprime nada. La razón de esto es que se realizan controles estrictos e iguales no solo del valor sino también del tipo. Ahora bien, si por alguna razón no le importaba el tipo, solo le importaba ver si tenían el mismo valor y quería permitir que JavaScript hiciera su propio encasillamiento. Puedes usar dos iguales.
+
+Si presiono ejecutar, puedes ver que se imprime. Son iguales, así que esa es la diferencia entre dos iguales y tres iguales. Sólo para darle una idea, esto se considera una mala práctica. Es muy raro que alguna vez quieras usar dos iguales. La razón de esto es que puede encontrarse con un problema en el que hace dos iguales y eso permitirá que se ejecute todo lo que está dentro de estas llaves y algunas de esas funciones que tiene dentro de las llaves. Es posible que estén esperando que la edad dos sea un número. Si permites que esto entre y permites que esto sea cierto, entonces esencialmente lo que sucederá es que terminarás con un error porque tendrás ageTwo que actuará como un número entero. Pero al final del día, sigue siendo una cadena. La mejor práctica suele ser tener tres iguales. Esa es la forma más estándar de hacerlo.
+
+if (edad === edad dos) {
+  console.log( ' Son iguales ' );
+}
+Hablemos de algunos de los otros. Tenemos nuestros triples iguales y ahora hagamos algo similar. Ahora vamos a hacer algunos de los diferentes operadores. Y la razón por la que lo comento es que tú puedes. Podrás tenerlos todos en las notas del programa. Por lo tanto, nunca se deje comprobar si la edad es igual o no a la edad dos. Aquí, la sintaxis para hacer eso será una explosión seguida de iguales seguidos de lo que sea con lo que intentes compararlo.
+
+if (edad! == edad dos) {
+  console.log( ' No es igual ' );
+}
+consol.log no es igual ahora, si lo ejecutamos, esto debería imprimirse como no igual. Todo allí está funcionando muy bien, ahora al igual que tenemos nuestros tres iguales a cuatro con un igual regular frente a uno estricto. También hay otra opción aquí que será estricta, no igual. Si ejecuto esto, pueden ver aquí que la impresión no será igual, pero no era igual antes.
+
+Esto tiene que lidiar exactamente con el mismo tipo de escenario. Esto devuelve verdadero si los operandos son del mismo tipo pero no son iguales o son de un tipo diferente. En otras palabras, si digo esto o 12 aquí y si ejecuto esto nuevamente, todavía se imprime que no son iguales porque al final del día son de un tipo diferente. Así que todo funciona correctamente y una vez más se considera que la mejor práctica es hacer la explosión, que es un signo de exclamación seguido de dos iguales.
+
+Hemos cubierto cuatro de ellos hasta ahora: hemos cubierto iguales, iguales estrictos no iguales y luego no iguales estrictos.
+
+Ahora solo nos quedan algunos más por recorrer. Configuremos una aplicación que verifique si alguien tiene edad suficiente para alquilar un automóvil. Voy a decir si la edad y diremos es mayor o igual a (que esta es la forma correcta de hacerlo) 25.
+
+Esta es una forma de decir mayor o igual que versus simplemente mayor que. Digamos mayor o igual que edad suficiente para alquilar un coche.
+
+si (edad >= 25 ) {
+  console.log( ' Tiene edad suficiente para alquilar un coche ' );
+}
+Ahora bien, si ejecuto esto, no se imprime nada y no debería hacerlo. Si cambio la edad para que sea 25 y la vuelvo a ejecutar, dice que tengo edad suficiente para alquilar un automóvil. Note que 25 no es mayor que 25 es igual y ahí es donde tenemos mayor o igual a. Ahora, si hice mayor entonces y presionamos ejecutar, no se imprime nada, eso es porque la diferencia entre mayor que y mayor o igual que, es mayor o igual que en realidad está buscando dos condiciones. Está comprobando si este valor es mayor que este otro valor o es igual. Eso es algo que es casi como si dijimos algo como
+
+si (edad == 25 ) {
+console.log( ' Tiene edad suficiente para alquilar un coche ' );
+}
+Ejecutamos ese condicional, habría impreso lo mismo, pero como tenemos la capacidad de hacer un valor mayor o igual, simplemente funciona. Ahora bien, esto no tiene una versión estricta. Sólo tenemos la capacidad de hacer mayor o igual a.
+
+Entonces también tenemos lo contrario de eso. Diremos si la edad es menor de 10 años y luego en el registro de la consola "puedes comer del menú infantil".
+
+si (edad < 10 ) {
+console.log( ' Puedes comer del menú infantil ' );
+}
+Ahora si ejecutamos esto no pasa nada. Pero si volvemos atrás y cambiamos la edad a 8 años, dice que puedes comer del menú infantil. Además, si dices menor o igual que y cambiamos la edad a 10, si presiono ejecutar nuevamente ahora dice que puedes comer del menú infantil porque no era menor sino igual a.
+
+Esa es la lista completa de los operadores de comparación que tenemos. Comenzando desde arriba tenemos iguales e iguales estrictos. Tenemos el otro que no será igual. Y luego tenemos estricto igual a. Entonces tenemos mayor o igual que. Y luego tenemos menor o igual que. Esos serán los que colocarás dentro de tus condicionales y el lado izquierdo y el lado derecho se llaman ambos operands.
+
+Estos son los valores, ya sean variables o simplemente valores codificados que los diferentes operadores de comparación compararán.
+
+Una nota final: observe que no es necesario utilizar una variable. Habrá momentos en los que intentarás comparar dos valores dinámicos diferentes. En ese caso, utilizará variables. Pero también habrá ocasiones en las que querrás codificar algo como lo hicimos cuando agregamos un número y podrás hacer ambas cosas cuando uses operadores de comparación en JavaScript.
+
+var edad = 10 ;
+var edadDos = ' 12 ' ;
+
+if (edad === edad dos) {
+  console.log( ' Son iguales ' );
+}
+
+if (edad! == edad dos) {
+  console.log( ' No es igual ' );
+}
+
+si (edad >= 25 ) {
+  console.log( ' Tiene edad suficiente para alquilar un coche ' );
+}
+
+si (edad <= 10 ) {
+  console.log( ' Puedes comer del menú infantil ' );
+}
+Recursos
+Documentación del operador de comparación
+Código fuente
