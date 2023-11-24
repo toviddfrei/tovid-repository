@@ -1285,4 +1285,92 @@ Documentación para operadores de asignación compuesta
 
 Código fuente
 
+# Orden de operaciones en JavaScript
+
+Esta guía explica cómo funciona el orden de las operaciones en programas JavaScript, incluida una discusión sobre PEDMAS/PEMDAS.
+
+En esta guía, regresaremos a algunos de sus primeros días de matemáticas y hablaremos sobre el orden de las operaciones. Porque el orden en que JavaScript interpretará sus cálculos es muy importante y puede que le resulte intuitivo o no dependiendo de su propia experiencia matemática.
+
+Primero quiero repasar un ejemplo básico de esto y luego veremos cuál es ese orden.
+
+Si creo una variable aquí llamada num y notas que estoy de vuelta en Code Pen, puedes hacer todo esto en Codepen o puedes hacerlo en la consola de JavaScript o en un archivo de tu sistema. Depende completamente de ti. Pero me gusta la forma en que esto generará todo, así que lo almacenaré en un número y luego imprimiré ese número.
+
+Así que aquí voy a decir cinco más cinco por diez. Y si cierre el número de sesión de la consola, ¿qué crees que resultará? Bueno, si leemos esto de izquierda a derecha sería cinco más cinco que es diez por diez. Entonces debería ser cien. ¿Pero es eso lo que vamos a conseguir? golpear correr.
+
+número de var = 5 + 5 * 10 ; // 55
+Puede ver que obtenemos 55 y eso se debe al orden de operaciones que sigue JavaScript y, en su mayor parte, casi todos los lenguajes de programación con los que he trabajado. Es decir, que no lo lee de izquierda a derecha, sino que lo disecciona y mira para ver cada uno de los operadores, y luego le pone una prioridad en base a eso.
+
+La forma en que funciona es que los primeros cinco se multiplican por 10, lo que equivaldría a 50. Luego, los 50 se suman a 5. Ahí es donde obtenemos 55. En los comentarios, voy a decir que esto se llama PEMDAS y, si Desde el Reino Unido o en Europa también he visto que esto se llama PEDMAS.
+
+Hablaremos de cuál es la diferencia aquí en un segundo. En cuanto a cómo vamos a trabajar con ello, verás que realmente importa. Ambos funcionan perfectamente bien. También hay otra frase que aprendí cuando era niño y es. Por favor, disculpe a mi querida tía Sally y si nota que este es un acrónimo PEMDAS y es solo un mnemotécnico para poder memorizar ese orden. ¿Qué representa esto?
+
+Bueno, voy a utilizar nuestro conocimiento sobre comentarios de varias líneas. Y de hecho hagamos de todo esto un comentario de varias líneas.
+
+/* Orden de operaciones
+   PEMDAS -> PEDMAS
+   Por favor, disculpe a mi querida tía Sally.
+*/
+Este es el orden de las operaciones. Hay acrónimos y una mnemónica.
+
+Ahora vamos a escribirlo. La P significa padres. Entonces, los paréntesis serán el primer operador que se tocará.
+
+Primero, son los paréntesis, luego los exponentes, seguidos por la multiplicación, luego la división, luego la suma y luego la resta.
+
+/*
+Paréntesis
+Exponentes
+Multiplicación 5 / 5 * 4
+División
+Suma
+Sustracción
+*/
+Aquí es donde obtenemos los pemdas y ese es el orden.
+
+Tomemos un ejemplo más amplio en lugar de que num simplemente sea igual a esto, resumamos algo de esto. Vamos a decir que los paréntesis dirán división, digamos un seis elevado a dos. Y luego restemos uno. Entonces esto es bastante cálculo aquí.
+
+número de var = 5 + ( 5 * 10 ) / 6 ** 2 - 1 ;   // 5.38
+Si ejecuto esto, puedes ver que la respuesta es 5.38.
+
+La respuesta en sí misma realmente no importa, es más bien quiero mostrarles exactamente cuál será el flujo aquí.
+
+Ahora que conocemos este orden, entonces puedes adivinar que la primera vez que llegue, lo primero que se ejecutará será cinco veces 10. Así que esto será 50. Ahora vamos a ir al exponentes, vamos a tener 6 * 6, que será 36, luego no habrá más multiplicación porque la multiplicación estaba dentro de aquí. Entonces vamos a dividir, vamos a tener 50 dividido por 36 y luego tendremos 5 y luego seguiremos la línea.
+
+Al final termina igualando apenas cinco coma tres. Pero este es el orden que sigue. Definitivamente te recomiendo que puedas aprender cómo funciona. Porque si se encontrara con un escenario en el que estuviera realizando algún tipo de cálculo pero no organizara sus operadores de la manera correcta, entonces podría terminar con algo que se consideraría un error lógico.
+
+Tenemos múltiples tipos de errores en la programación, tenemos errores en los que el sistema simplemente no se ejecuta. Donde obtenemos un error real, pero también tenemos errores lógicos donde todo parece haber funcionado. Pero la lógica de programación no era precisa y, por eso, el resultado no era preciso. Por lo tanto, es muy importante tener en cuenta que está atento no solo a los errores relacionados con la ejecución de su programa, sino también a aquellos en los que se ejecuta pero genera un resultado incorrecto.
+
+Eso es algo que se ve bastante, especialmente con los nuevos desarrolladores, ya que están aprendiendo que los programas se ejecutan pero pueden tener algún comportamiento extraño debido a cosas como esta debido al orden de las operaciones. Así que definitivamente te recomiendo que explores eso un poco. Podrás ver cómo puedes cambiarlo. Pruebe qué sucede cuando cambia el orden cuando cambia las cosas de izquierda a derecha y luego vea exactamente si lo entiende.
+
+Ahora, lo único que diré es que quizás se pregunten por qué tenemos dos formas diferentes de leer esto: tenemos PEMDAS y tenemos PEDMAS. De hecho, lo aprendí con: "Por favor, disculpe a mi querida tía Sally". Esta es la primera manera y si creciste en los EE. UU., es muy probable que esa sea la forma en que te enseñaron también.
+
+Sin embargo, he hablado con varias personas de países europeos y les enseñaron de esta manera. La razón por la que ambos son precisos y funcionan perfectamente bien es que cuando se trata de multiplicación y división, el orden no importa. En este caso lo leerá de izquierda a derecha.
+
+En otras palabras, si tengo algo como 5/5 * 4. Esto se leerá de izquierda a derecha. De hecho, probémoslo solo para asegurarnos de que no me estoy volviendo loco o enseñándote mal. Ahora, técnicamente, si va de izquierda a derecha, esto debería ser igual a 1. Entonces 1 multiplicado por 4 debería ser igual a 4. Entonces nuestra salida debería ser cuatro. Y si ejecutamos esto, puedes ver que son cuatro.
+
+número    de var = 5/5 * 4 ; // 4
+Aunque la multiplicación en nuestro mnemónico viene antes de la división, ese lado no importa. Si tienes una multiplicación después, no se ejecutará, será lo que sea que esté de izquierda a derecha.
+
+He impartido varios cursos de programación y este es un tema interesante porque varias personas me han dicho que me he equivocado en ambos lados.
+
+Tuve un curso donde enseñé PEMDAS. Tuve otro curso donde enseñé PEDMAS y en ambas ocasiones la gente comentó que lo estaba enseñando incorrectamente. Técnicamente ambos son precisos. Una vez que llegas a la multiplicación y división, el orden no importa. Simplemente lo lee de izquierda a derecha.
+
+Lo más importante es entender cómo organizar las cosas con paréntesis, exponentes y luego entender ese orden en general. Espero que ahora tengas una mejor idea o comprensión de que el orden de las operaciones en javascript es muy importante y también cómo funciona en tus propios programas.
+
+/* Orden de operaciones
+   PEMDAS -> PEDMAS
+   Por favor, disculpe a mi querida tía Sally.
+   paréntesis
+   Exponentes
+   Multiplicación 5 / 5 * 4
+   División
+   Suma
+   Sustracción
+*/
+
+número de var = 5 + ( 5 * 10 ) / 6 ** 2 - 1 ;
+número
+ de var = 5/5 * 4 ;
+Recursos
+
+Código fuente
 
