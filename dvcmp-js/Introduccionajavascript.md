@@ -1484,3 +1484,49 @@ si (edad <= 10 ) {
 Recursos
 Documentación del operador de comparación
 Código fuente
+
+# Guía de condicionales If/Else en JavaScript
+
+Esta guía muestra cómo implementar condicionales if/else en JavaScript para dar a los programas un comportamiento dinámico.
+Tareas de guía
+Leer tutorial
+Ver vídeo guía
+Completa el ejercicio
+Play Video
+Ahora que tiene una idea básica sobre la sintaxis de uso conditionalsy también una buena idea sobre la lista completa de archivos comparison operators.
+
+Hablemos de cómo podemos darle a nuestros programas un tipo de comportamiento más dinámico. Hasta ahora hemos hablado de implementar if statementsuna declaración if que no es muy útil sin tener también la capacidad de ofrecer otra opción. La capacidad de tener un si o un otro, me encanta la forma en que se describen porque puedes leerlo casi como un lenguaje sencillo. Donde se puede decir si tal o cual es cierto. Si se cumple esta condición, quiero que ejecute todo dentro de esta sección. De lo contrario, si no, quiero que muestres todo o ejecutes todo en esta otra sección.
+
+Veamos un ejemplo. Voy a decir que la edad var es igual a 30. Ahora, si digo que la edad es menor o igual a 10, iniciaremos el registro de la consola. "Se puede comer del menú infantil".
+
+var edad = 30 ;
+
+si (edad <= 10 ) {
+  console.log( ' Puedes comer del menú infantil ' );
+}
+En este momento, si ejecutamos esto, no sucederá nada porque no buscará en esta condición y no encontrará una declaración verdadera. Recuerde que la forma en que funcionan los condicionales es comprobar si un determinado tipo de condición es verdadera o no. En este caso, la condición es que la edad sea menor o igual a 10 años.
+
+Lo que hace javascript es venir aquí y mirar dentro de estos paréntesis y decir, eso no es cierto, así que voy a ignorar todo lo que hay dentro de aquí. Todo, desde el corchete hacia abajo, lo voy a ignorar y eso está bien, en ciertas situaciones. Hay muchas ocasiones en las que uso solo una declaración if por sí sola.
+
+Sin embargo, en esta situación y en muchas otras situaciones quieres tener algún otro tipo de condición, esto es lo que quiero que hagas si el condicional es verdadero, pero es posible que quieras que hagas algo más si es falso. Aquí lo que podemos decir es justo Elsedespués de las llaves y luego aquí haremos el registro de la consola, simplemente copie y en lugar de decir "puede comer del menú para niños", diga "hora del menú para adultos para usted".
+
+si (edad <= 10 ) {
+  console.log( ' Puedes comer del menú infantil ' );
+} demás {
+  console.log( ' Tiempo de menú para adultos para ti ' );
+}
+Ahora, si ejecuto esto se ejecutará y se saltará la primera condición aquí, se saltará todo lo que está dentro de las llaves, porque esto no es cierto. Entonces porque eso no es cierto. Salta al resto y luego ejecutará todo lo que esté dentro de los últimos corchetes. Ahora, si cambio la edad para que sea 8, presiono ejecutar nuevamente.
+
+Ahora puedes ver que dice "Puedes comer del menú infantil".
+
+Así es como se puede implementar una IF ELSEcondición básica dentro de JavaScript.
+
+En la siguiente guía, veremos cómo podemos agregar más complejidad aquí y cómo podemos configurar un conjunto completo de escenarios para nuestras condiciones.
+
+var edad = 30 ;
+
+si (edad <= 10 ) {
+  console.log( ' Puedes comer del menú infantil ' );
+} demás {
+  console.log( ' Tiempo de menú para adultos para ti ' );
+}
