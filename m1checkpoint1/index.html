@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modulo 1 - Checkpoint 1</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https: //fonts.googleapis.com/css2? family= Ubuntu+Mono & display=swap" rel="hoja de estilo">
+    <script src="https://kit.fontawesome.com/9e2a0cf49a.js" crossorigin="anonymous"></script>
+    <style>
+        .gridOne {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            margin-top: 15px;
+        }
+
+        .gridTwo {
+            display: grid;
+            grid-template-columns: 1fr 1fr 2fr;
+            margin-top: 15px;
+        }
+
+        .gridTwo-left {
+            background-color: red;
+        }
+
+        .gridTwo-center {
+            background-color: blue;
+        }
+
+        .gridTwo-right {
+            background-color: yellow;
+        }
+        
+        .gridThree {
+            display: grid;
+            grid-template-rows: 1fr 2fr;
+            width: 500px;
+            height: 300px;
+            background-color: burlywood;
+            margin-top: 15px;
+        }
+
+        .gridThree-image img{
+            object-fit: cover;
+            width: 100%;
+            height: 225px;
+        }
+
+        .gridFour {
+            display: grid;
+            grid-template-rows: 1fr 1fr;
+            width: 500px;
+            background-color: green;
+            margin-top: 15px;
+        }
+
+        #gridFour-twoText {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+
+        .gridFive {
+            display: grid;
+            grid-template-rows: 1fr 1fr;
+            width: 500px;
+            background-color: aqua;
+            margin-top: 15px;
+        }
+
+        #gridFive-twoImages {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            justify-items: center;
+            align-items: center;
+        }
+
+        #gridFive-twoImages img {
+            object-fit: cover;
+            height: 200px;
+            width: 200px;
+        }
+
+        .gridSix {
+            background-color: rgb(195, 195, 195) ;
+            display: grid;
+            grid-template-columns: 1fr 3fr;
+            width: 500px;
+            margin-top: 15px;
+        }
+
+        .gridSix-text {
+            font-family: 'Ubuntu Mono', monospace;         
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="gridOne">
+        <p>Hello World</p>
+        <p style="color: blue;">My Fantastic Content</p>
+    </div>
+
+    <div class="gridTwo">
+        <div class="gridTwo-left">
+            <p>text left</p>
+        </div>
+
+        <div class="gridTwo-center">
+            <p>text center</p>
+        </div>
+
+        <div class="gridTwo-right">
+            <p>text right</p>
+        </div>
+    </div>
+
+    <div class="gridThree">
+        <div class="gridThree-text">
+            <p>the text I chose is awesome</p>
+        </div>
+
+        <div class="gridThree-image">
+            <img src="images/kelly-sikkema-hSPVuakrJqs-unsplash.jpg" alt="">
+        </div>
+    </div>
+    
+    <div class="gridFour">
+        <div class="gridFour-oneText">
+            <p>Me Even More Awesome Text</p>
+        </div>
+
+        <div id="gridFour-twoText">
+            <p>My left text</p>
+            <p>My right text</p>
+        </div>
+    </div>
+
+    <div class="gridFive">
+        <div class="gridFive-oneText">
+            <p>Me Even More Awesome Text</p>
+        </div>
+
+        <div id="gridFive-twoImages">
+            <img src="images/mira-kemppainen-qC117ahi-mE-unsplash.jpg" alt="">
+            <img src="images/josh-hild-_TuI8tZHlk4-unsplash.jpg" alt="">
+        </div>
+    </div>
+
+    <div class="gridSix">
+        <div class="gridSix-icon">
+            <i class="fa-solid fa-mug-hot"></i>
+        </div>
+
+        <div class="gridSix-text">
+            <p>MY AWESOME GOOGLE FONT IS APPLIED HERE</p>
+        </div>
+    </div>
+
+</body>
+</html>
